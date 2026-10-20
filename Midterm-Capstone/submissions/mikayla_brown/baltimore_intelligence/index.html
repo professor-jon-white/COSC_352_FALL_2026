@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baltimore Municipal Intelligence Engine (BMIE) Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .bar-transition {
+            transition: width 0.4s ease-in-out, background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+    <header class="bg-slate-900 text-white py-8 px-4 sm:px-6 shadow-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+                <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-cyan-400">
+                    Baltimore Municipal Intelligence Engine
+                </h1>
+                <p class="text-slate-400 text-sm sm:text-base mt-1">
+                    Offline Municipal Data Intelligence &amp; Analytics Dashboard
+                </p>
+            </div>
+            <div class="bg-slate-800 border border-slate-700 px-4 py-2 rounded-lg text-xs sm:text-sm text-slate-300">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 mr-2"></span>
+                Engine Status: <strong class="text-white">Active (Local Data)</strong>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 mt-8 space-y-8">
+        <section class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+                <h2 class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Select Analytical Scope</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Filter all 5 stakeholder metrics by district focus</p>
+            </div>
+            <div class="flex flex-wrap gap-2 w-full sm:w-auto" id="filter-buttons">
+                <button onclick="setDistrict('all')" id="btn-all" class="flex-1 sm:flex-none px-4 py-2 text-sm font-medium rounded-lg border border-cyan-600 bg-cyan-600 text-white shadow-sm hover:bg-cyan-700 transition">
+                    All Districts
+                </button>
+                <button onclick="setDistrict('western')" id="btn-western" class="flex-1 sm:flex-none px-4 py-2 text-sm font-medium rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition">
+                    Western District
+                </button>
+                <button onclick="setDistrict('central')" id="btn-central" class="flex-1 sm:flex-none px-4 py-2 text-sm font-medium rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition">
+                    Central District
+                </button>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="border-b border-slate-100 pb-4 mb-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-cyan-700 uppercase tracking-wide bg-cyan-50 px-2.5 py-1 rounded-md border border-cyan-200">Question 1</span>
+                    <span class="text-xs text-slate-400">Financial Liability Metric</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mt-2">Settlement Cost by District</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                    <strong>Stakeholder Explanation:</strong> Aggregates municipal financial settlement liabilities alongside total incident counts per police district to highlight fiscal exposure across municipal administrative zones.
+                </p>
+            </div>
+            <div id="q1-container" class="space-y-4"></div>
+        </section>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="border-b border-slate-100 pb-4 mb-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-cyan-700 uppercase tracking-wide bg-cyan-50 px-2.5 py-1 rounded-md border border-cyan-200">Question 2</span>
+                    <span class="text-xs text-slate-400">Operational Focus</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mt-2">Units &amp; Shifts Hotspots</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                    <strong>Stakeholder Explanation:</strong> Identifies operational units and working shifts present in cross-matched settlement records (association, not correlation) to assist leadership in shift-level oversight.
+                </p>
+            </div>
+            <div id="q2-container" class="space-y-4"></div>
+        </section>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="border-b border-slate-100 pb-4 mb-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-cyan-700 uppercase tracking-wide bg-cyan-50 px-2.5 py-1 rounded-md border border-cyan-200">Question 3</span>
+                    <span class="text-xs text-slate-400">Temporal Velocity Analysis</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mt-2">Reporting &amp; Discipline Timeline</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                    <strong>Stakeholder Explanation:</strong> Compares annual counts of reported misconduct cases against formal disciplinary actions over time to measure process throughput and resolution lag.
+                </p>
+            </div>
+            <div id="q3-container" class="space-y-4"></div>
+        </section>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="border-b border-slate-100 pb-4 mb-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-cyan-700 uppercase tracking-wide bg-cyan-50 px-2.5 py-1 rounded-md border border-cyan-200">Question 4</span>
+                    <span class="text-xs text-slate-400">Recurrence Metric</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mt-2">Recurring Officer Identifiers</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                    <strong>Stakeholder Explanation:</strong> Highlights repeat officer identifiers appearing in multiple records, tracking individual cost impact relative to the departmental mean officer payout.
+                </p>
+            </div>
+            <div id="q4-container" class="space-y-4"></div>
+        </section>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="border-b border-slate-100 pb-4 mb-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-cyan-700 uppercase tracking-wide bg-cyan-50 px-2.5 py-1 rounded-md border border-cyan-200">Question 5</span>
+                    <span class="text-xs text-slate-400">Composite Risk Model</span>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mt-2">District Resource Allocation Risk Index</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                    <strong>Stakeholder Explanation:</strong> Calculates a composite risk score (0–100 scale) combining financial liability weightings (60%) and incident density (40%) to aid strategic resource allocation.
+                </p>
+            </div>
+            <div id="q5-container" class="space-y-4"></div>
+        </section>
+
+        <footer class="bg-slate-100 p-6 rounded-xl border border-slate-200 text-xs text-slate-600 space-y-2">
+            <h4 class="font-bold text-slate-800 text-sm">Data Limitations &amp; Policy Disclaimer</h4>
+            <p>
+                Demonstration inputs are synthetic and normalized for analytical benchmarking. Statistics are descriptive and do not establish direct causal relationships.
+            </p>
+            <p>
+                A matched row uses stable <code class="bg-slate-200 px-1 py-0.5 rounded text-slate-800">officer_id</code> records supplied in both datasets; district, unit, and calendar-year comparisons depend strictly on the supplied normalized fields.
+            </p>
+            <div class="pt-2 text-slate-400 border-t border-slate-200">
+                Baltimore Municipal Intelligence Engine (BMIE) • Offline Analytics Platform
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const mockData = {
+            all: {
+                q1: [
+                    { label: "Western District", cost: 200000, incidents: 2, maxCost: 350000 },
+                    { label: "Central District", cost: 350000, incidents: 4, maxCost: 350000 },
+                    { label: "Eastern District", cost: 120000, incidents: 1, maxCost: 350000 }
+                ],
+                q2: [
+                    { label: "Central / Day", pairs: 4, payouts: 350000 },
+                    { label: "Western / Night", pairs: 2, payouts: 200000 },
+                    { label: "Western / Day", pairs: 2, payouts: 200000 }
+                ],
+                q3: [
+                    { year: "2020", reports: 3, actions: 1 },
+                    { year: "2021", reports: 5, actions: 3 },
+                    { year: "2022", reports: 2, actions: 4 },
+                    { year: "2023", reports: 1, actions: 2 }
+                ],
+                q4: [
+                    { id: "OFF-001", records: 4, cost: 200000, multiplier: "1.0x" },
+                    { id: "OFF-042", records: 3, cost: 350000, multiplier: "1.75x" },
+                    { id: "OFF-108", records: 2, cost: 120000, multiplier: "0.60x" }
+                ],
+                q5: [
+                    { district: "Central District", score: 100.0, cost: 350000, incidents: 4 },
+                    { district: "Western District", score: 74.3, cost: 200000, incidents: 2 },
+                    { district: "Eastern District", score: 31.4, cost: 120000, incidents: 1 }
+                ]
+            },
+            western: {
+                q1: [
+                    { label: "Western District", cost: 200000, incidents: 2, maxCost: 200000 }
+                ],
+                q2: [
+                    { label: "Western / Night", pairs: 2, payouts: 200000 },
+                    { label: "Western / Day", pairs: 2, payouts: 200000 }
+                ],
+                q3: [
+                    { year: "2020", reports: 1, actions: 0 },
+                    { year: "2022", reports: 1, actions: 1 },
+                    { year: "2023", reports: 0, actions: 1 }
+                ],
+                q4: [
+                    { id: "OFF-001", records: 4, cost: 200000, multiplier: "1.0x" }
+                ],
+                q5: [
+                    { district: "Western District", score: 100.0, cost: 200000, incidents: 2 }
+                ]
+            },
+            central: {
+                q1: [
+                    { label: "Central District", cost: 350000, incidents: 4, maxCost: 350000 }
+                ],
+                q2: [
+                    { label: "Central / Day", pairs: 4, payouts: 350000 }
+                ],
+                q3: [
+                    { year: "2020", reports: 2, actions: 1 },
+                    { year: "2021", reports: 5, actions: 3 },
+                    { year: "2022", reports: 1, actions: 3 }
+                ],
+                q4: [
+                    { id: "OFF-042", records: 3, cost: 350000, multiplier: "1.75x" }
+                ],
+                q5: [
+                    { district: "Central District", score: 100.0, cost: 350000, incidents: 4 }
+                ]
+            }
+        };
+
+        let currentDistrict = 'all';
+
+        function setDistrict(district) {
+            currentDistrict = district;
+            ['all', 'western', 'central'].forEach(d => {
+                const btn = document.getElementById(`btn-${d}`);
+                if (d === district) {
+                    btn.className = "flex-1 sm:flex-none px-4 py-2 text-sm font-medium rounded-lg border border-cyan-600 bg-cyan-600 text-white shadow-sm transition";
+                } else {
+                    btn.className = "flex-1 sm:flex-none px-4 py-2 text-sm font-medium rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition";
+                }
+            });
+            renderDashboard();
+        }
+
+        function renderDashboard() {
+            const data = mockData[currentDistrict];
+
+            const q1Container = document.getElementById('q1-container');
+            q1Container.innerHTML = data.q1.map(item => {
+                const pct = Math.min(100, (item.cost / item.maxCost) * 100);
+                return `
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-sm font-medium">
+                            <span class="text-slate-800">${item.label}</span>
+                            <span class="text-slate-900 font-bold">$${item.cost.toLocaleString()}</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                            <div class="bg-cyan-600 h-3 rounded-full bar-transition" style="width: ${pct}%"></div>
+                        </div>
+                        <div class="text-xs text-slate-500">${item.incidents} associated incidents</div>
+                    </div>
+                `;
+            }).join('');
+
+            const q2Container = document.getElementById('q2-container');
+            q2Container.innerHTML = data.q2.map(item => {
+                const pct = Math.min(100, (item.pairs / 5) * 100);
+                return `
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-sm font-medium">
+                            <span class="text-slate-800">${item.label}</span>
+                            <span class="text-slate-700">${item.pairs} matched pairs</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
+                            <div class="bg-slate-700 h-3 rounded-full bar-transition" style="width: ${pct}%"></div>
+                        </div>
+                        <div class="text-xs text-slate-500">$${item.payouts.toLocaleString()} associated settlement payouts</div>
+                    </div>
+                `;
+            }).join('');
+
+            const q3Container = document.getElementById('q3-container');
+            q3Container.innerHTML = data.q3.map(item => {
+                return `
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div class="font-bold text-sm text-slate-800">Year ${item.year}</div>
+                        <div class="flex gap-4 text-xs">
+                            <span class="px-2.5 py-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-md font-medium">
+                                ${item.reports} Misconduct Reports
+                            </span>
+                            <span class="px-2.5 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-md font-medium">
+                                ${item.actions} Disciplinary Actions
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const q4Container = document.getElementById('q4-container');
+            q4Container.innerHTML = data.q4.map(item => {
+                return `
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="font-mono font-bold text-sm text-slate-900">${item.id}</span>
+                            <span class="text-xs text-slate-500 ml-2">(${item.records} source records)</span>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm font-bold text-slate-900">$${item.cost.toLocaleString()}</div>
+                            <div class="text-xs text-cyan-700 font-medium">${item.multiplier} mean officer cost</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const q5Container = document.getElementById('q5-container');
+            q5Container.innerHTML = data.q5.map(item => {
+                const pct = item.score;
+                return `
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-sm font-medium">
+                            <span class="text-slate-800 font-bold">${item.district}</span>
+                            <span class="text-slate-900 font-extrabold text-base">${item.score.toFixed(1)} / 100</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-3.5 overflow-hidden">
+                            <div class="bg-rose-500 h-3.5 rounded-full bar-transition" style="width: ${pct}%"></div>
+                        </div>
+                        <div class="text-xs text-slate-500">$${item.cost.toLocaleString()} liability • ${item.incidents} incidents</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        window.onload = function() {
+            renderDashboard();
+        };
+    </script>
+</body>
+</html>
