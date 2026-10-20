@@ -1,0 +1,6 @@
+# Raw datasets (large; download separately)
+/data/
+
+# Build output
+/capstone
+*.exe

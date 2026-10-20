@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  test:
+    name: vet, build, race tests, sample run
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Go (version from go.mod)
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Go version
+        run: go version
+
+      - name: go vet
+        run: go vet ./...
+
+      - name: go build
+        run: go build -o capstone ./cmd/capstone
+
+      - name: go test -race
+        run: go test -race ./...
+
+      # The real Open Baltimore CSVs are not in the repository, so the program
+      # runs on the small synthetic samples in testdata/. Compare mode runs
+      # both the sequential and concurrent pipelines and exits non-zero if
+      # their results differ.
+      - name: Run on sample data
+        run: |
+          ./capstone -mode=compare -memstats \
+            -crime testdata/crime_sample.csv \
+            -requests testdata/requests_311_sample.csv | tee run.txt
+          grep -q "Results identical" run.txt
+          test "$(grep -c '^Answer:' run.txt)" -eq 5

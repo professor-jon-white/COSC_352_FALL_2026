@@ -1,0 +1,17 @@
+name: macos-check
+on: [push, workflow_dispatch]
+jobs:
+  mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: go version
+      - run: go build -o baltimore-intel ./cmd
+      - run: go test ./...
+      - run: go test -race ./...
+      - run: ./baltimore-intel
+      - run: ./baltimore-intel -verify
+      - run: bash run.sh

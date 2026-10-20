@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baltimore City Cross-Dataset Intelligence Report</title>
+<style>
+:root { --bg:#f6f7f9; --card:#ffffff; --ink:#1c2430; --muted:#5b6675; --line:#dde2e8; --accent:#1f5fbf; --neg:#b5452f; --call:#eaf1fc; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#12161c; --card:#1b212a; --ink:#e6e9ee; --muted:#9aa5b4; --line:#2c3541; --accent:#6aa3ff; --neg:#e07a63; --call:#1e2a3d; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width:980px; margin:0 auto; padding:24px 16px 64px; }
+h1 { font-size:26px; margin:0 0 4px; }
+h2 { font-size:19px; margin:0 0 4px; }
+h3 { font-size:14px; margin:20px 0 8px; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; }
+.sub { color:var(--muted); margin:0 0 20px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px; margin:0 0 20px; }
+.aud { display:inline-block; font-size:12px; color:var(--accent); border:1px solid var(--accent); border-radius:99px; padding:1px 10px; margin-bottom:10px; }
+.finding { background:var(--call); border-left:4px solid var(--accent); padding:12px 14px; border-radius:4px; margin:14px 0; }
+table { border-collapse:collapse; width:100%; font-size:14px; }
+.scroll { overflow-x:auto; }
+th, td { text-align:left; padding:6px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { color:var(--muted); font-weight:600; }
+.chart { margin:6px 0 4px; }
+.row { display:grid; grid-template-columns:minmax(120px,240px) 1fr minmax(90px,170px); gap:10px; align-items:center; margin:3px 0; font-size:13px; }
+.lab { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.track { background:var(--line); border-radius:3px; height:16px; }
+.bar { background:var(--accent); height:100%; border-radius:3px; }
+.bar.neg { background:var(--neg); }
+.val { color:var(--muted); }
+.note { color:var(--muted); font-size:13px; margin:6px 0; }
+footer { color:var(--muted); font-size:13px; margin-top:24px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Baltimore City Cross-Dataset Intelligence Report</h1>
+<p class="sub">Analysis window: 2026-01-01 to 2026-10-11 (UTC). Datasets: NIBRS Group A crime, 311 service requests, liquor licenses.</p>
+
+<div class="card">
+<h2>Data overview</h2>
+<div class="scroll">
+<table>
+<tr><th>Dataset</th><th>File</th><th>Rows read</th><th>Rows parsed</th><th>In window</th><th>Placed in a neighborhood</th></tr>
+<tr><td>NIBRS crime</td><td>NIBRS_GroupA_Crime_Data_1100291637803527672.csv</td><td>278,239</td><td>278,239</td><td>44,485</td><td>44,480 (100.0%)</td></tr>
+<tr><td>311 requests</td><td>311_Customer_Service_Requests_2026.csv</td><td>943,283</td><td>943,283</td><td>655,510</td><td>643,404 (98.2%)</td></tr>
+<tr><td>Liquor licenses (active)</td><td>Licenses.csv</td><td>30,968</td><td>30,968</td><td>2,233</td><td>2,091 (93.6%)</td></tr>
+</table>
+</div>
+</div>
+
+
+<section class="card" id="q1">
+<span class="aud">For: Department of Public Works / Department of Transportation</span>
+<h2>Question 1: Which 311 problems track violent crime?</h2>
+<p>Across Baltimore&#39;s neighborhoods, which types of 311 service request rise and fall most closely with violent crime, even after accounting for how many 311 requests each neighborhood makes in total? These are the neglect signals crews could prioritise first.</p>
+<div class="finding"><strong>Finding.</strong> Across 268 neighborhoods, total 311 volume has a very strong positive relationship with violent crime (rho = 0.76), largely because busy neighborhoods report more of everything. After removing that size effect, the request type that tracks violent crime most closely is &#34;HLTH-Animal Police/Fire/Sheriff/City Work Crew Standby&#34; (rho = 0.44, 596 requests).</div>
+
+<h3>Size-adjusted Spearman correlation with violent crime, top 311 request types</h3>
+<div class="chart">
+<div class="row"><span class="lab" title="HLTH-Animal Police/Fire/Sheriff...">HLTH-Animal Police/Fire/Sheriff...</span><div class="track"><div class="bar" style="width:100.0%"></div></div><span class="val">0.44</span></div>
+<div class="row"><span class="lab" title="HLTH-Animal In Danger/Injured/A...">HLTH-Animal In Danger/Injured/A...</span><div class="track"><div class="bar" style="width:93.1%"></div></div><span class="val">0.41</span></div>
+<div class="row"><span class="lab" title="SW-Dirty Street Proactive">SW-Dirty Street Proactive</span><div class="track"><div class="bar" style="width:86.3%"></div></div><span class="val">0.38</span></div>
+<div class="row"><span class="lab" title="SW-Cleaning">SW-Cleaning</span><div class="track"><div class="bar" style="width:75.5%"></div></div><span class="val">0.34</span></div>
+<div class="row"><span class="lab" title="HLTH-Animal Stray Held">HLTH-Animal Stray Held</span><div class="track"><div class="bar" style="width:75.2%"></div></div><span class="val">0.33</span></div>
+<div class="row"><span class="lab" title="TRM-Pickup Pothole">TRM-Pickup Pothole</span><div class="track"><div class="bar" style="width:74.9%"></div></div><span class="val">0.33</span></div>
+<div class="row"><span class="lab" title="HCD-Illegal Dumping">HCD-Illegal Dumping</span><div class="track"><div class="bar" style="width:72.6%"></div></div><span class="val">0.32</span></div>
+<div class="row"><span class="lab" title="SW-Dirty Street">SW-Dirty Street</span><div class="track"><div class="bar" style="width:71.1%"></div></div><span class="val">0.32</span></div>
+<div class="row"><span class="lab" title="SW-Graffiti Removal Proactive">SW-Graffiti Removal Proactive</span><div class="track"><div class="bar" style="width:68.5%"></div></div><span class="val">0.30</span></div>
+<div class="row"><span class="lab" title="SW-SIU Clean Up (HCD USE ONLY)">SW-SIU Clean Up (HCD USE ONLY)</span><div class="track"><div class="bar" style="width:68.3%"></div></div><span class="val">0.30</span></div>
+</div>
+
+
+<h3>Top 311 request types by size-adjusted correlation with violent crime</h3>
+<div class="scroll">
+<table>
+<tr><th>Rank</th><th>311 request type</th><th>Requests</th><th>Rho (raw)</th><th>Rho (size-adjusted)</th><th>Strength (adjusted)</th></tr>
+<tr><td>1</td><td>HLTH-Animal Police/Fire/Sheriff/City Work Crew Standby</td><td>596</td><td>0.69</td><td>0.44</td><td>moderate positive relationship</td></tr>
+<tr><td>2</td><td>HLTH-Animal In Danger/Injured/Abused/Neglected</td><td>5,090</td><td>0.77</td><td>0.41</td><td>moderate positive relationship</td></tr>
+<tr><td>3</td><td>SW-Dirty Street Proactive</td><td>3,272</td><td>0.72</td><td>0.38</td><td>moderate positive relationship</td></tr>
+<tr><td>4</td><td>SW-Cleaning</td><td>5,570</td><td>0.68</td><td>0.34</td><td>moderate positive relationship</td></tr>
+<tr><td>5</td><td>HLTH-Animal Stray Held</td><td>1,354</td><td>0.71</td><td>0.33</td><td>moderate positive relationship</td></tr>
+<tr><td>6</td><td>TRM-Pickup Pothole</td><td>5,298</td><td>0.65</td><td>0.33</td><td>moderate positive relationship</td></tr>
+<tr><td>7</td><td>HCD-Illegal Dumping</td><td>7,609</td><td>0.72</td><td>0.32</td><td>moderate positive relationship</td></tr>
+<tr><td>8</td><td>SW-Dirty Street</td><td>16,256</td><td>0.74</td><td>0.32</td><td>moderate positive relationship</td></tr>
+<tr><td>9</td><td>SW-Graffiti Removal Proactive</td><td>9,289</td><td>0.55</td><td>0.30</td><td>moderate positive relationship</td></tr>
+<tr><td>10</td><td>SW-SIU Clean Up (HCD USE ONLY)</td><td>4,228</td><td>0.69</td><td>0.30</td><td>moderate positive relationship</td></tr>
+</table>
+</div>
+
+<p class="note">Note: Spearman rank correlation is used because neighborhood counts are heavily skewed. &#39;Size-adjusted&#39; is a partial Spearman correlation that controls for each neighborhood&#39;s total 311 volume (a stand-in for population, which is not in these datasets). Bars drawn with a lighter glyph are negative.</p>
+<p class="note">Note: Only request types with at least 321 requests are ranked. 311 call-centre information rows (ECC) are excluded. These are associations to investigate, not proof that one problem causes crime.</p>
+
+</section>
+
+<section class="card" id="q2">
+<span class="aud">For: Board of Liquor License Commissioners / Baltimore Police Department</span>
+<h2>Question 2: Do liquor licenses track night-time violent crime?</h2>
+<p>Do neighborhoods with more active liquor licenses see more violent crime between 9 PM and 4 AM (Eastern time)?</p>
+<div class="finding"><strong>Finding.</strong> Across 268 neighborhoods, active liquor licenses and night-time violent crime show a moderate positive relationship (rho = 0.46). Neighborhoods in the &#34;6&#43; licenses&#34; tier average 15.8 night-time violent crimes, versus 3.9 in the &#34;0 licenses&#34; tier. Night-time makes up 35.6% of violent crime with a known time in the &#34;6&#43; licenses&#34; tier, versus 29.6% in the &#34;0 licenses&#34; tier.</div>
+
+<h3>Average night-time violent crimes per neighborhood, by number of active liquor licenses</h3>
+<div class="chart">
+<div class="row"><span class="lab" title="0 licenses">0 licenses</span><div class="track"><div class="bar" style="width:24.8%"></div></div><span class="val">3.9 (n=99 neighborhoods)</span></div>
+<div class="row"><span class="lab" title="1-2 licenses">1-2 licenses</span><div class="track"><div class="bar" style="width:33.2%"></div></div><span class="val">5.3 (n=52 neighborhoods)</span></div>
+<div class="row"><span class="lab" title="3-5 licenses">3-5 licenses</span><div class="track"><div class="bar" style="width:38.3%"></div></div><span class="val">6.1 (n=31 neighborhoods)</span></div>
+<div class="row"><span class="lab" title="6&#43; licenses">6&#43; licenses</span><div class="track"><div class="bar" style="width:100.0%"></div></div><span class="val">15.8 (n=86 neighborhoods)</span></div>
+</div>
+
+
+<h3>Neighborhoods grouped by active liquor licenses</h3>
+<div class="scroll">
+<table>
+<tr><th>License tier</th><th>Neighborhoods</th><th>Avg violent crimes</th><th>Avg night violent crimes</th><th>Night share of violent</th></tr>
+<tr><td>0 licenses</td><td>99</td><td>13.5</td><td>3.9</td><td>29.6%</td></tr>
+<tr><td>1-2 licenses</td><td>52</td><td>17.3</td><td>5.3</td><td>31.2%</td></tr>
+<tr><td>3-5 licenses</td><td>31</td><td>21.4</td><td>6.1</td><td>28.9%</td></tr>
+<tr><td>6&#43; licenses</td><td>86</td><td>45.4</td><td>15.8</td><td>35.6%</td></tr>
+</table>
+</div>
+
+<h3>Ten neighborhoods with the most active liquor licenses</h3>
+<div class="scroll">
+<table>
+<tr><th>Neighborhood</th><th>Licenses</th><th>Violent crimes</th><th>Night violent crimes</th><th>Night share of violent</th></tr>
+<tr><td>Fells Point</td><td>153</td><td>76</td><td>44</td><td>59.5%</td></tr>
+<tr><td>Canton</td><td>149</td><td>43</td><td>21</td><td>48.8%</td></tr>
+<tr><td>Downtown</td><td>140</td><td>372</td><td>128</td><td>34.8%</td></tr>
+<tr><td>Hampden</td><td>95</td><td>46</td><td>10</td><td>22.2%</td></tr>
+<tr><td>Federal Hill</td><td>65</td><td>56</td><td>33</td><td>61.1%</td></tr>
+<tr><td>Mount Vernon</td><td>55</td><td>58</td><td>11</td><td>19.3%</td></tr>
+<tr><td>Mid-Town Belvedere</td><td>45</td><td>49</td><td>19</td><td>38.8%</td></tr>
+<tr><td>Riverside</td><td>45</td><td>15</td><td>10</td><td>66.7%</td></tr>
+<tr><td>Harbor East</td><td>42</td><td>21</td><td>12</td><td>57.1%</td></tr>
+<tr><td>Little Italy</td><td>42</td><td>13</td><td>7</td><td>53.8%</td></tr>
+</table>
+</div>
+
+<p class="note">Note: Night is 21:00-03:59 Eastern. Crime timestamps are published in UTC and converted to local time; records at exactly local midnight are treated as &#39;time unknown&#39; and excluded from night counts.</p>
+<p class="note">Note: Licenses are matched to neighborhoods through their street block. Licenses whose block never appears in the crime or 311 data cannot be placed in a neighborhood (see the data overview).</p>
+<p class="note">Note: Licenses cluster in commercial and entertainment districts that also draw many visitors, so a positive link is not evidence that licenses cause crime.</p>
+
+</section>
+
+<section class="card" id="q3">
+<span class="aud">For: Mayor&#39;s Office (equity of city services)</span>
+<h2>Question 3: Do high-crime neighborhoods wait longer for 311 service?</h2>
+<p>Neighborhoods are split into four groups by their level of violent crime. How long does it take the city to close a 311 request in each group, and how many requests are still open?</p>
+<div class="finding"><strong>Finding.</strong> Neighborhoods in the highest violent-crime group close 311 requests in a median of 1.3 days, versus 2.2 days in the lowest group. Across 268 neighborhoods, violent crime and median close time show a weak negative relationship (rho = -0.11).</div>
+
+<h3>Median days to close a 311 request, by violent-crime group</h3>
+<div class="chart">
+<div class="row"><span class="lab" title="Q1 lowest violent crime">Q1 lowest violent crime</span><div class="track"><div class="bar" style="width:100.0%"></div></div><span class="val">2.2 days</span></div>
+<div class="row"><span class="lab" title="Q2">Q2</span><div class="track"><div class="bar" style="width:47.9%"></div></div><span class="val">1.0 days</span></div>
+<div class="row"><span class="lab" title="Q3">Q3</span><div class="track"><div class="bar" style="width:55.3%"></div></div><span class="val">1.2 days</span></div>
+<div class="row"><span class="lab" title="Q4 highest violent crime">Q4 highest violent crime</span><div class="track"><div class="bar" style="width:62.2%"></div></div><span class="val">1.3 days</span></div>
+</div>
+
+
+<h3>311 service by neighborhood violent-crime group</h3>
+<div class="scroll">
+<table>
+<tr><th>Group</th><th>Neighborhoods</th><th>Avg violent crimes</th><th>Completed requests</th><th>Median days to close</th><th>Requests still open</th></tr>
+<tr><td>Q1 lowest violent crime</td><td>67</td><td>3.0</td><td>40,174</td><td>2.2</td><td>6.8%</td></tr>
+<tr><td>Q2</td><td>67</td><td>10.7</td><td>84,807</td><td>1.0</td><td>4.8%</td></tr>
+<tr><td>Q3</td><td>67</td><td>23.2</td><td>146,888</td><td>1.2</td><td>4.4%</td></tr>
+<tr><td>Q4 highest violent crime</td><td>67</td><td>64.5</td><td>290,949</td><td>1.3</td><td>4.1%</td></tr>
+</table>
+</div>
+
+<h3>Ten neighborhoods with the slowest median 311 close time</h3>
+<div class="scroll">
+<table>
+<tr><th>Neighborhood</th><th>Completed requests</th><th>Median days to close</th><th>Requests still open</th><th>Violent crimes</th></tr>
+<tr><td>Dickeyville</td><td>175</td><td>7.1</td><td>4.5%</td><td>1</td></tr>
+<tr><td>Winchester</td><td>1,535</td><td>7.1</td><td>4.1%</td><td>40</td></tr>
+<tr><td>Holabird Industrial Park</td><td>213</td><td>7.0</td><td>6.0%</td><td>1</td></tr>
+<tr><td>Baltimore Peninsula</td><td>770</td><td>6.9</td><td>7.5%</td><td>2</td></tr>
+<tr><td>Franklintown</td><td>450</td><td>6.3</td><td>6.1%</td><td>5</td></tr>
+<tr><td>Perring Loch</td><td>1,781</td><td>6.0</td><td>5.2%</td><td>16</td></tr>
+<tr><td>Franklintown Road</td><td>2,878</td><td>6.0</td><td>4.6%</td><td>25</td></tr>
+<tr><td>Clifton Park</td><td>313</td><td>5.9</td><td>7.8%</td><td>8</td></tr>
+<tr><td>Gwynns Falls</td><td>979</td><td>5.8</td><td>4.9%</td><td>6</td></tr>
+<tr><td>West Arlington</td><td>1,255</td><td>5.2</td><td>6.0%</td><td>15</td></tr>
+</table>
+</div>
+
+<p class="note">Note: Close time counts only completed requests, so requests that are still open are not in the median; the &#39;still open&#39; column shows that backlog separately.</p>
+<p class="note">Note: Only neighborhoods with at least 20 completed requests are included. 311 call-centre information rows (ECC) are excluded because they close instantly.</p>
+<p class="note">Note: A neighborhood&#39;s mix of request types affects its median (a bulk-trash pickup is scheduled, a pothole is not), so this shows a gap in outcomes rather than its cause.</p>
+
+</section>
+
+<section class="card" id="q4">
+<span class="aud">For: City Planning / Board of Liquor License Commissioners</span>
+<h2>Question 4: Are licensed blocks more violent than unlicensed blocks?</h2>
+<p>Joining the three datasets at the level of individual street blocks: how much violent crime does the average block with a liquor license see compared with a block without one, and which license types stand out?</p>
+<div class="finding"><strong>Finding.</strong> The 805 street blocks with a liquor license average 1.42 violent crimes per block, versus 0.25 on the 22,650 blocks without one (5.7x as many). The license type with the highest average is &#34;Arena&#34; (4.33 violent crimes per block).</div>
+
+<h3>Average violent crimes per street block</h3>
+<div class="chart">
+<div class="row"><span class="lab" title="No liquor license">No liquor license</span><div class="track"><div class="bar" style="width:5.7%"></div></div><span class="val">0.25</span></div>
+<div class="row"><span class="lab" title="Any liquor license">Any liquor license</span><div class="track"><div class="bar" style="width:32.7%"></div></div><span class="val">1.42</span></div>
+<div class="row"><span class="lab" title="Arena">Arena</span><div class="track"><div class="bar" style="width:100.0%"></div></div><span class="val">4.33</span></div>
+<div class="row"><span class="lab" title="Hotel/Motel">Hotel/Motel</span><div class="track"><div class="bar" style="width:85.9%"></div></div><span class="val">3.72</span></div>
+<div class="row"><span class="lab" title="Adult">Adult</span><div class="track"><div class="bar" style="width:61.5%"></div></div><span class="val">2.67</span></div>
+<div class="row"><span class="lab" title="Package Goods Only">Package Goods Only</span><div class="track"><div class="bar" style="width:43.4%"></div></div><span class="val">1.88</span></div>
+<div class="row"><span class="lab" title="Restaurant">Restaurant</span><div class="track"><div class="bar" style="width:35.9%"></div></div><span class="val">1.56</span></div>
+<div class="row"><span class="lab" title="Tavern">Tavern</span><div class="track"><div class="bar" style="width:33.5%"></div></div><span class="val">1.45</span></div>
+<div class="row"><span class="lab" title="Non-Profits Only">Non-Profits Only</span><div class="track"><div class="bar" style="width:14.5%"></div></div><span class="val">0.63</span></div>
+<div class="row"><span class="lab" title="Municipal Golf Course">Municipal Golf Course</span><div class="track"><div class="bar" style="width:4.6%"></div></div><span class="val">0.20</span></div>
+<div class="row"><span class="lab" title="Brewery">Brewery</span><div class="track"><div class="bar" style="width:2.6%"></div></div><span class="val">0.11</span></div>
+</div>
+
+
+<h3>Crime per street block by liquor-license status and type</h3>
+<div class="scroll">
+<table>
+<tr><th>Block group</th><th>Blocks</th><th>Avg crimes</th><th>Avg violent crimes</th><th>Avg night violent crimes</th><th>Violent vs unlicensed</th></tr>
+<tr><td>No liquor license</td><td>22,650</td><td>1.61</td><td>0.25</td><td>0.08</td><td>1.0x</td></tr>
+<tr><td>Any liquor license</td><td>805</td><td>9.45</td><td>1.42</td><td>0.54</td><td>5.7x</td></tr>
+<tr><td>Arena</td><td>9</td><td>30.22</td><td>4.33</td><td>2.44</td><td>17.6x</td></tr>
+<tr><td>Hotel/Motel</td><td>29</td><td>15.24</td><td>3.72</td><td>1.00</td><td>15.1x</td></tr>
+<tr><td>Adult</td><td>12</td><td>13.67</td><td>2.67</td><td>1.50</td><td>10.8x</td></tr>
+<tr><td>Package Goods Only</td><td>178</td><td>11.96</td><td>1.88</td><td>0.71</td><td>7.6x</td></tr>
+<tr><td>Restaurant</td><td>282</td><td>11.33</td><td>1.56</td><td>0.61</td><td>6.3x</td></tr>
+<tr><td>Tavern</td><td>377</td><td>9.13</td><td>1.45</td><td>0.67</td><td>5.9x</td></tr>
+<tr><td>Non-Profits Only</td><td>46</td><td>4.30</td><td>0.63</td><td>0.20</td><td>2.6x</td></tr>
+<tr><td>Municipal Golf Course</td><td>5</td><td>2.60</td><td>0.20</td><td>0.00</td><td>0.8x</td></tr>
+<tr><td>Brewery</td><td>9</td><td>3.11</td><td>0.11</td><td>0.00</td><td>0.5x</td></tr>
+</table>
+</div>
+
+<p class="note">Note: A block is a 100-block of one street, built by normalising the address in each dataset; this is the only key all three datasets share.</p>
+<p class="note">Note: The block universe is every block that appears in the crime, 311 or license data inside the window. Blocks with no crime, no 311 request and no license are not in any file, so averages for unlicensed blocks are somewhat overstated.</p>
+<p class="note">Note: License types with fewer than 5 blocks are not listed. A block with several license types counts once in each.</p>
+<p class="note">Note: Licensed blocks are mostly commercial corridors with more foot traffic and more reporting, so the gap does not show that licenses cause crime.</p>
+
+</section>
+
+<section class="card" id="q5">
+<span class="aud">For: Mayor&#39;s Office</span>
+<h2>Question 5: Which neighborhoods need combined intervention first?</h2>
+<p>Combining all three datasets, which neighborhoods rank highest on violent crime, 311 demand, slow 311 response and liquor-license density together?</p>
+<div class="finding"><strong>Finding.</strong> Of 268 neighborhoods ranked, Downtown scores highest (95.9 of 100), followed by Carrollton Ridge and Frankford.</div>
+
+<h3>Priority score (0-100), top neighborhoods</h3>
+<div class="chart">
+<div class="row"><span class="lab" title="Downtown">Downtown</span><div class="track"><div class="bar" style="width:100.0%"></div></div><span class="val">95.9</span></div>
+<div class="row"><span class="lab" title="Carrollton Ridge">Carrollton Ridge</span><div class="track"><div class="bar" style="width:96.4%"></div></div><span class="val">92.4</span></div>
+<div class="row"><span class="lab" title="Frankford">Frankford</span><div class="track"><div class="bar" style="width:94.7%"></div></div><span class="val">90.9</span></div>
+<div class="row"><span class="lab" title="Upton">Upton</span><div class="track"><div class="bar" style="width:94.4%"></div></div><span class="val">90.6</span></div>
+<div class="row"><span class="lab" title="Baltimore Highlands">Baltimore Highlands</span><div class="track"><div class="bar" style="width:93.5%"></div></div><span class="val">89.7</span></div>
+<div class="row"><span class="lab" title="Penrose/Fayette Street Ou...">Penrose/Fayette Street Ou...</span><div class="track"><div class="bar" style="width:93.1%"></div></div><span class="val">89.3</span></div>
+<div class="row"><span class="lab" title="Sandtown-Winchester">Sandtown-Winchester</span><div class="track"><div class="bar" style="width:91.8%"></div></div><span class="val">88.1</span></div>
+<div class="row"><span class="lab" title="East Baltimore Midway">East Baltimore Midway</span><div class="track"><div class="bar" style="width:89.5%"></div></div><span class="val">85.9</span></div>
+<div class="row"><span class="lab" title="Penn North">Penn North</span><div class="track"><div class="bar" style="width:87.8%"></div></div><span class="val">84.2</span></div>
+<div class="row"><span class="lab" title="Federal Hill">Federal Hill</span><div class="track"><div class="bar" style="width:87.5%"></div></div><span class="val">83.9</span></div>
+<div class="row"><span class="lab" title="Mount Vernon">Mount Vernon</span><div class="track"><div class="bar" style="width:87.1%"></div></div><span class="val">83.5</span></div>
+<div class="row"><span class="lab" title="Mondawmin">Mondawmin</span><div class="track"><div class="bar" style="width:87.0%"></div></div><span class="val">83.5</span></div>
+<div class="row"><span class="lab" title="Brooklyn">Brooklyn</span><div class="track"><div class="bar" style="width:87.0%"></div></div><span class="val">83.5</span></div>
+<div class="row"><span class="lab" title="Broadway East">Broadway East</span><div class="track"><div class="bar" style="width:86.6%"></div></div><span class="val">83.1</span></div>
+<div class="row"><span class="lab" title="Canton">Canton</span><div class="track"><div class="bar" style="width:86.6%"></div></div><span class="val">83.1</span></div>
+</div>
+
+
+<h3>Top priority neighborhoods</h3>
+<div class="scroll">
+<table>
+<tr><th>Rank</th><th>Neighborhood</th><th>Score</th><th>Violent crimes</th><th>311 requests</th><th>Median days to close</th><th>Licenses</th><th>Factors in top 20%</th></tr>
+<tr><td>1</td><td>Downtown</td><td>95.9</td><td>372</td><td>12,366</td><td>3.1</td><td>140</td><td>violent crime, 311 volume, slow response, licenses</td></tr>
+<tr><td>2</td><td>Carrollton Ridge</td><td>92.4</td><td>88</td><td>6,274</td><td>3.2</td><td>20</td><td>violent crime, 311 volume, slow response, licenses</td></tr>
+<tr><td>3</td><td>Frankford</td><td>90.9</td><td>140</td><td>8,150</td><td>2.2</td><td>18</td><td>violent crime, 311 volume, licenses</td></tr>
+<tr><td>4</td><td>Upton</td><td>90.6</td><td>148</td><td>5,582</td><td>2.7</td><td>12</td><td>violent crime, 311 volume, licenses</td></tr>
+<tr><td>5</td><td>Baltimore Highlands</td><td>89.7</td><td>70</td><td>4,197</td><td>3.1</td><td>29</td><td>violent crime, 311 volume, slow response, licenses</td></tr>
+<tr><td>6</td><td>Penrose/Fayette Street Outreach</td><td>89.3</td><td>61</td><td>4,052</td><td>4.9</td><td>10</td><td>violent crime, 311 volume, slow response, licenses</td></tr>
+<tr><td>7</td><td>Sandtown-Winchester</td><td>88.1</td><td>113</td><td>8,475</td><td>2.0</td><td>20</td><td>violent crime, 311 volume, licenses</td></tr>
+<tr><td>8</td><td>East Baltimore Midway</td><td>85.9</td><td>58</td><td>6,185</td><td>2.6</td><td>9</td><td>violent crime, 311 volume</td></tr>
+<tr><td>9</td><td>Penn North</td><td>84.2</td><td>89</td><td>3,466</td><td>2.2</td><td>8</td><td>violent crime, 311 volume</td></tr>
+<tr><td>10</td><td>Federal Hill</td><td>83.9</td><td>56</td><td>2,896</td><td>2.5</td><td>65</td><td>violent crime, licenses</td></tr>
+<tr><td>11</td><td>Mount Vernon</td><td>83.5</td><td>58</td><td>3,173</td><td>2.1</td><td>55</td><td>violent crime, licenses</td></tr>
+<tr><td>12</td><td>Mondawmin</td><td>83.5</td><td>100</td><td>4,162</td><td>2.0</td><td>6</td><td>violent crime, 311 volume</td></tr>
+<tr><td>13</td><td>Brooklyn</td><td>83.5</td><td>142</td><td>11,204</td><td>1.0</td><td>18</td><td>violent crime, 311 volume, licenses</td></tr>
+<tr><td>14</td><td>Broadway East</td><td>83.1</td><td>77</td><td>8,966</td><td>1.6</td><td>14</td><td>violent crime, 311 volume, licenses</td></tr>
+<tr><td>15</td><td>Canton</td><td>83.1</td><td>43</td><td>12,066</td><td>2.0</td><td>149</td><td>violent crime, 311 volume, licenses</td></tr>
+</table>
+</div>
+
+<p class="note">Note: Each factor is converted to a percentile rank (0-100) across neighborhoods, then weighted: violent crime 45%, 311 volume 20%, slow 311 response 20%, liquor licenses 15%. The weights are a policy choice and can be changed in DefaultWeights().</p>
+<p class="note">Note: &#34;Factors in top 20%&#34; lists the measures on which a neighborhood ranks at or above the 80th percentile. Counts are not adjusted for population. Neighborhoods without enough completed 311 requests use the citywide median close time.</p>
+
+</section>
+
+
+<footer>
+<div>Join: 19,566 street blocks indexed; 287,773 311 call-centre information rows (ECC) excluded from analysis.</div>
+<div>Stage timings: ingest 1.55s; index 265ms; join 180ms;</div>
+<div>Run: 2.153s total, 4 workers per stage, heap in use 313 MB, 14 GC cycles.</div>
+</footer>
+</main>
+</body>
+</html>

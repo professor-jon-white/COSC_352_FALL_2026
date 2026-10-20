@@ -1,0 +1,62 @@
+[
+  {
+    "area": "downtown/seton hill",
+    "violent_crime_per_1000": 62.24,
+    "businesses_per_1000": 249.68,
+    "priority_score": 70
+  },
+  {
+    "area": "greater mondawmin",
+    "violent_crime_per_1000": 30.22,
+    "businesses_per_1000": 16.44,
+    "priority_score": 62
+  },
+  {
+    "area": "clifton-berea",
+    "violent_crime_per_1000": 23.23,
+    "businesses_per_1000": 11.35,
+    "priority_score": 54.8
+  },
+  {
+    "area": "greenmount east",
+    "violent_crime_per_1000": 21.28,
+    "businesses_per_1000": 10.78,
+    "priority_score": 52.6
+  },
+  {
+    "area": "cherry hill",
+    "violent_crime_per_1000": 18.41,
+    "businesses_per_1000": 16.142,
+    "priority_score": 48.8
+  },
+  {
+    "area": "belair-edison",
+    "violent_crime_per_1000": 15.91,
+    "businesses_per_1000": 7.49,
+    "priority_score": 47
+  },
+  {
+    "area": "fells point",
+    "violent_crime_per_1000": 15.51,
+    "businesses_per_1000": 34.03,
+    "priority_score": 43.4
+  },
+  {
+    "area": "canton",
+    "violent_crime_per_1000": 12.62,
+    "businesses_per_1000": 25.97,
+    "priority_score": 41.1
+  },
+  {
+    "area": "hamilton",
+    "violent_crime_per_1000": 9.28,
+    "businesses_per_1000": 14.93,
+    "priority_score": 38.6
+  },
+  {
+    "area": "greater roland park/poplar hill",
+    "violent_crime_per_1000": 2.2,
+    "businesses_per_1000": 39.4,
+    "priority_score": 27.7
+  }
+]

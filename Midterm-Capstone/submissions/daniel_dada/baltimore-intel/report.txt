@@ -1,0 +1,117 @@
+
+=== Q1: Neighborhoods high in BOTH crime and 311 demand ===
+For: Mayor's Office
+
+Ranked by crime rank + 311 rank. Bars show crime count.
+
+1. DOWNTOWN                    ██████████████████████████████ 2087   | 311 requests: 15489
+2. BELAIR EDISON               █████████████ 938   | 311 requests: 14335
+3. BROOKLYN                    ████████████ 882   | 311 requests: 8772
+4. CANTON                      ██████████ 720   | 311 requests: 9412
+5. FRANKFORD                   ███████████████ 1069   | 311 requests: 7630
+6. SANDTOWN WINCHESTER         ████████ 583   | 311 requests: 8438
+7. PATTERSON PARK NEIGHBORHOO  ████████ 589   | 311 requests: 5848
+8. HAMPDEN                     ████████ 616   | 311 requests: 5786
+9. CENTRAL PARK HEIGHTS        ██████ 448   | 311 requests: 7829
+10. WASHINGTON VILLAGE PIGTOW  ███████ 510   | 311 requests: 6495
+
+Note: raw counts favor large neighborhoods; population data would be needed to normalize.
+
+=== Q2: Do sanitation/blight requests track violent crime? ===
+For: Department of Public Works
+
+Pearson r = 0.684 across 289 neighborhoods (moderate correlation)
+Correlation is not causation: both may simply reflect neighborhood size or density.
+
+Top 10 by sanitation requests (bar), with violent crimes:
+CARROLLTON RIDGE               ██████████████████████████████ 4332   | violent crimes: 127
+BELAIR EDISON                  █████████████████████████ 3717   | violent crimes: 228
+BROOKLYN                       ███████████████████████ 3380   | violent crimes: 174
+SANDTOWN WINCHESTER            ████████████████████ 2989   | violent crimes: 188
+BROADWAY EAST                  ████████████████████ 2950   | violent crimes: 88
+PENN NORTH                     █████████████████ 2552   | violent crimes: 115
+EAST BALTIMORE MIDWAY          █████████████████ 2491   | violent crimes: 113
+CENTRAL PARK HEIGHTS           ████████████████ 2379   | violent crimes: 130
+MCELDERRY PARK                 ████████████████ 2378   | violent crimes: 114
+DOWNTOWN                       ███████████████ 2231   | violent crimes: 519
+
+=== Q3: Neighborhoods with high crime but low 311 use (possible under-reporting) ===
+For: Baltimore Police Department
+
+Metric: crimes per 311 request (121 neighborhoods with 109+ crimes and 311 matches; mean 0.11, sd 0.10).
+A high z-score means unusually many crimes relative to 311 activity.
+
+INNER HARBOR                   ██████████████████████████████ 30   z=7.19  crimes=772  311=932
+DUNBAR BROADWAY                ███████████████ 15   z=3.58  crimes=246  311=527
+CANTON INDUSTRIAL AREA         ██████████████ 14   z=3.25  crimes=411  311=947
+REISTERSTOWN STATION           ███████████ 11   z=2.55  crimes=314  311=862
+PULASKI INDUSTRIAL AREA        ██████████ 10   z=2.32  crimes=436  311=1276
+DOWNTOWN WEST                  █████████ 9   z=2.09  crimes=174  311=546
+UNIVERSITY OF MARYLAND         █████████ 9   z=2.09  crimes=172  311=540
+GAY STREET                     ███████ 7   z=1.68  crimes=313  311=1128
+OLDTOWN                        █████ 5   z=1.11  crimes=301  311=1367
+ARMISTEAD GARDENS              ████ 4   z=1.02  crimes=191  311=904
+
+Excluded (enough crimes but zero 311 rows; likely a neighborhood-name mismatch between datasets):
+  GLENHAM BELHAR, NEW SOUTHWEST MOUNT CLARE
+
+Caveat: about 31% of 311 rows lack a neighborhood, so 311 counts are undercounted.
+
+=== Q4: Crime vs. lighting and transportation requests by hour ===
+For: Department of Transportation
+
+Peak hours: crime 17:00, lighting requests 21:00, transportation requests 08:00
+Each column is scaled to its own maximum.
+
+Hour   Crime                  Lighting               Transport             
+00:00  ███████████████        ██████                 █                     
+01:00  ██████████             ████████               █                     
+02:00  █████████              ██████                                       
+03:00  ███████                ██████                                       
+04:00  ██████                 █████                                        
+05:00  █████                  ██████                 █                     
+06:00  █████                  ██████                 ███                   
+07:00  ██████                 █████                  █████████             
+08:00  █████████              ████████               ██████████████████    
+09:00  █████████              ███████████            ████████████████      
+10:00  ██████████             ████████████           ███████████████       
+11:00  ███████████            █████████████          ██████████████        
+12:00  ██████████████         ███████████            ██████████████        
+13:00  ███████████            ██████████             ████████████          
+14:00  █████████████          ██████████             ████████████          
+15:00  ████████████████       ██████████             ████████████          
+16:00  ████████████████       ████████               ███████████           
+17:00  ██████████████████     ███████████            █████████             
+18:00  █████████████████      ██████████████         ███████               
+19:00  ████████████████       ██████████████         ██████                
+20:00  ████████████████       ████████████████       █████                 
+21:00  ████████████████       ██████████████████     ████                  
+22:00  ███████████████        ██████████             ██                    
+23:00  ██████████████         ████████               █                     
+
+Note: many records carry 00:00 or 12:00 default times, which can inflate those hours.
+
+=== Q5: Monthly trends and neighborhoods that diverge from the city ===
+For: Department of Planning
+
+Month Crime                  311 requests          
+Jan   ████████████████       ███████████████         (3594 / 45853)
+Feb   ███████████████        █████████████           (3482 / 40611)
+Mar   ████████████████       █████████████           (3642 / 41446)
+Apr   ███████████████        ███████████████         (3512 / 47541)
+May   ████████████████       ████████████████        (3696 / 51576)
+Jun   █████████████████      ███████████████         (3811 / 48664)
+Jul   █████████████████      ████████████████        (3981 / 50519)
+Aug   █████████████████      ██████████████████      (3869 / 54943)
+Sep   ██████████████████     ██████████████          (4026 / 44248)
+Oct   ████████████████       ██████████████          (3798 / 45506)
+Nov   ███████████████        ███████████             (3472 / 35893)
+Dec   █████████████          ███████████             (2920 / 35173)
+
+Neighborhoods whose monthly crime pattern differs most from the citywide pattern
+(lowest correlation with the city curve; neighborhoods with 300+ crimes):
+  BROOKLYN                       r=-0.27  (882 crimes)
+  BALTIMORE HIGHLANDS            r=-0.10  (339 crimes)
+  CHARLES VILLAGE                r=-0.09  (322 crimes)
+  BELAIR EDISON                  r=-0.08  (938 crimes)
+  CENTRAL PARK HEIGHTS           r=-0.00  (448 crimes)

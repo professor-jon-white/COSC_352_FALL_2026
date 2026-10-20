@@ -1,0 +1,5 @@
+/bin/
+/output-test/
+/data-refresh/
+*.partial
+.DS_Store

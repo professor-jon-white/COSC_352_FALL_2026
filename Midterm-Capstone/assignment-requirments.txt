@@ -1,0 +1,19 @@
+Mid-Term Capstone Project: Multi-Paradigmatic Data Processing Engine
+
+Weight: 15% of Final Grade
+Submission Platform: Canvas (Must include execution script/README and build cleanly on macOS)
+Project Overview
+
+For this project, you will design and implement a software application using one of the primary modern languages covered in class: Go (GoLang), Scala, Clojure, or Rust. Your system will ingest, reformat, join, and process multiple public datasets from the Baltimore City Open Data PortalLinks to an external site. to provide actionable intelligence for fictional municipal stakeholders (e.g., Mayor’s Office, Department of Transportation, or City Planning).
+
+Core Engineering Requirements
+
+Approved Language: Written in Go, Scala, Clojure, or Rust.
+Multi-Dataset Ingestion: Ingest and parse at least two separate datasets from Open BaltimoreLinks to an external site. in raw format (e.g., combining crime data with liquor licenses, or 311 service requests with property data).
+Multithreading & Concurrency: Utilize native concurrency primitives (e.g., Go channels/goroutines, Rust threads/rayon, Clojure futures/agents, or Scala futures) to parse, join, and aggregate data concurrently across thread pools.
+Memory & Resource Management: Design your system with explicit consideration for runtime overhead, thread safety, and memory management (e.g., stack allocation, heap safety, zero-cost abstractions, or garbage collection mechanics).
+Software Architecture: Apply clean design patterns (e.g., Pipeline, Builder, Strategy, or Factory patterns) to separate data ingestion, cross-dataset matching logic, and output formatting.
+Stakeholder Analysis: Process and present answers to 5 major, distinct research questions designed for municipal leaders based on cross-dataset insights. Output must include formatted data summaries, web ui or terminal-based visualizations (e.g., ASCII charts, histograms, or generated reports).
+Submission Requirements
+
+Submit your repository files/archive via Canvas. All projects must include a detailed README.md with explicit instructions on how to compile, execute, and verify the application on a macOS platform. Submissions will be graded strictly according to project specifications and compile/run success.

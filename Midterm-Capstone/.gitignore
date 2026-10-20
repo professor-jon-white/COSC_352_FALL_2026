@@ -1,0 +1,24 @@
+# Canvas exports and raw archives
+*.zip
+_raw/
+2026-*_Grades-*.csv
+
+# Downloaded Open Baltimore data inside student submissions (hundreds of MB to GB)
+submissions/**/*.csv
+submissions/**/*.csv.gz
+submissions/**/*.geojson
+submissions/**/*.geojson.gz
+submissions/**/*.jsonl
+submissions/**/data/**/*.json
+submissions/**/data/raw/
+
+# Build artifacts and prebuilt binaries shipped by students
+submissions/**/target/
+submissions/**/bin/
+submissions/**/*.exe
+submissions/**/*.app/
+.DS_Store
+submissions/**/.git/
+submissions/amari_hall/BaltimoreCapstone/baltimore-engine-mac-*
+submissions/anaya_efferson/BaltimoreDataEngine/baltimore-engine-macos
+submissions/tyriqe_thomas/baltimore_etl/baltimoreetl

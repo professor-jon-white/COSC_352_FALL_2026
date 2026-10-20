@@ -1,0 +1,101 @@
+BALTIMORE CIVIC INTELLIGENCE REPORT
+Generated 2026-10-14 22:40
+
+Crime dataset : 43803    rows used (2024), 600934 skipped, 288 neighborhoods  (3.814s)
+311 dataset   : 656827   rows used (2025), 274497 skipped, 279 neighborhoods  (4.974s)
+Join (neighborhood): 277 neighborhoods appear in both datasets
+Note: 'skipped' = rows with no neighborhood, unparseable date, or outside the selected years.
+
+==============================================================================
+Q1. Mayor's Office: Which neighborhoods carry the most crime, and what does their 311 picture look like?
+==============================================================================
+Neighborhood                 Crime  Viol%     311  Open%  Crime volume
+DOWNTOWN                      2087  24.9%   14273   4.8%  ██████████████████████████████
+FRANKFORD                     1069  25.4%    9085   1.6%  ███████████████
+BELAIR-EDISON                  938  24.3%   23676   0.6%  █████████████
+BROOKLYN                       882  19.7%    9478   1.1%  ████████████
+INNER HARBOR                   772  17.4%    1507  10.7%  ███████████
+CANTON                         720  10.3%   12161   2.2%  ██████████
+HAMPDEN                        616  15.6%    7878   2.7%  ████████
+PATTERSON PARK NEIGHBORHO…     589  18.7%    7140   1.5%  ████████
+CHERRY HILL                    588  21.4%    3932   1.2%  ████████
+SANDTOWN-WINCHESTER            583  32.2%    8835   1.0%  ████████
+
+Takeaway: DOWNTOWN has the most incidents (2087). 'Open%' is the share of that area's 311 requests still unresolved.
+
+==============================================================================
+Q2. Public Works: Where is crime high but 311 engagement low (possible service gap / under-reporting)?
+==============================================================================
+(Only neighborhoods present in BOTH datasets with at least the average of 155 crimes are considered.)
+
+Neighborhood                 Crime     311   Crime/311  Ratio
+INNER HARBOR                   772    1507        0.51  ██████████████████████████████
+CANTON INDUSTRIAL AREA         411     939        0.44  █████████████████████████
+DUNBAR-BROADWAY                246     628        0.39  ██████████████████████
+PULASKI INDUSTRIAL AREA        436    1417        0.31  ██████████████████
+REISTERSTOWN STATION           314    1038        0.30  █████████████████
+GAY STREET                     313    1195        0.26  ███████████████
+CARROLL - CAMDEN INDUSTRI…     256    1049        0.24  ██████████████
+UNIVERSITY OF MARYLAND         172     767        0.22  █████████████
+DOWNTOWN WEST                  174     796        0.22  ████████████
+OLDTOWN                        301    1797        0.17  █████████
+
+Takeaway: INNER HARBOR has 0.5 crimes per 311 request; consider outreach to boost 311 awareness there.
+
+==============================================================================
+Q3. City Planning: Do neighborhoods with more crime also generate more 311 requests?
+==============================================================================
+Pearson r across 277 neighborhoods = 0.772 (strong positive relationship)
+
+Crime quartile          Avg crime    Avg 311
+Q1 (lowest crime)            22.1      677.0  ███
+Q2                           69.7     1324.3  ███████
+Q3                          131.8     2358.2  █████████████
+Q4 (highest crime)          395.5     5085.5  ██████████████████████████████
+
+==============================================================================
+Q4. Transportation/DPW: Which 311 request types are over-represented in the highest-crime neighborhoods?
+==============================================================================
+Compared with the whole city, in the top 10 crime neighborhoods ('Lift' = hot share / city share):
+
+311 request type                Count    Hot %   City %   Lift  
+TRM-CURB REPAIR                   386     0.4%     0.2%  2.55x  ████████████████████
+MOHS-HOMELESS OUTREACH            264     0.3%     0.2%  1.60x  ████████████
+TEC-FOOTWAYS COMPLAINT            862     0.9%     0.6%  1.54x  ████████████
+HLTH-EV NOISE                     341     0.3%     0.3%  1.29x  ██████████
+SW-RAT RUBOUT                     721     0.7%     0.6%  1.25x  █████████
+TRC-CONDUIT INVESTIGATION         230     0.2%     0.2%  1.23x  █████████
+SW-RAT RUBOUT PROACTIVE         19787    20.2%    17.9%  1.13x  ████████
+SW-GRAFFITI REMOVAL               296     0.3%     0.3%  1.13x  ████████
+HLTH-ANIMAL AGGRESSIVE ANIMAL     283     0.3%     0.3%  1.12x  ████████
+ECC-CITIZEN COMPLAINT OR CONC…    532     0.5%     0.5%  1.09x  ████████
+
+Takeaway: 'TRM-CURB REPAIR' requests are 2.55x more common in high-crime areas than citywide.
+
+==============================================================================
+Q5. Operations: When do crime and 311 demand peak (by month and time of day)?
+==============================================================================
+Seasonality by month of year (each series scaled to its own max)
+Month    Crime                            311 
+Jan       3594 ███████████████████      61667 █████████████████
+Feb       3482 ███████████████████      50918 ██████████████
+Mar       3642 ███████████████████      57792 ████████████████
+Apr       3512 ███████████████████      10704 ███
+May       3696 ████████████████████     23504 ██████
+Jun       3811 ████████████████████     68574 ███████████████████
+Jul       3981 █████████████████████    73821 █████████████████████
+Aug       3869 █████████████████████    75702 ██████████████████████
+Sep       4026 ██████████████████████   65576 ███████████████████
+Oct       3798 ████████████████████     64174 ██████████████████
+Nov       3472 ██████████████████       50894 ██████████████
+Dec       2920 ███████████████          53501 ███████████████
+
+Time of day (share of rows that carry a timestamp)
+Block               Crime%                           311%
+Overnight 00-05      18.3% ████████                  1.9% █
+Morning   06-11      17.8% ███████                  34.1% ███████████████
+Afternoon 12-17      30.8% █████████████            51.8% ██████████████████████
+Evening   18-23      33.0% ██████████████           12.1% █████
+
+----------------------------------------------------------------------------
+Runtime: 1 CPUs, 1 workers/dataset, total 4.975s, heap in use 10.3 MB, 179 GC cycles

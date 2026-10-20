@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baltimore Municipal Data Report</title>
+<style>
+body {
+	font-family: system-ui, sans-serif;
+	background: #eef2f6;
+	color: #172b40;
+	margin: 0;
+	padding: 28px;
+}
+main { max-width: 1050px; margin: auto; }
+h1 { font-size: 32px; margin-bottom: 8px; }
+p { line-height: 1.6; }
+section {
+	background: white;
+	border-radius: 12px;
+	padding: 24px;
+	margin: 22px 0;
+	box-shadow: 0 2px 8px #0000000d;
+}
+h2 { font-size: 21px; margin-top: 0; }
+.row {
+	display: grid;
+	grid-template-columns: minmax(170px, 2fr) 3fr 100px;
+	gap: 14px;
+	align-items: center;
+	margin: 14px 0;
+}
+.label { font-size: 13px; overflow-wrap: anywhere; }
+.track { background: #edf1f5; height: 18px; border-radius: 4px; }
+.bar { background: #2576ad; height: 100%; border-radius: 4px; }
+.value { text-align: right; font-variant-numeric: tabular-nums; }
+.number { font-size: 42px; font-weight: 700; color: #2576ad; }
+.note { color: #526579; font-size: 14px; }
+pre {
+	white-space: pre;
+	overflow-x: auto;
+	background: #f4f6f8;
+	padding: 18px;
+	font-size: 12px;
+}
+@media (max-width: 600px) {
+	body { padding: 12px; }
+	section { padding: 16px; }
+	.row { grid-template-columns: 1fr; gap: 5px; }
+	.value { text-align: left; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Baltimore Municipal Data Report</h1>
+<p>311 service requests joined with vacant-building notice records by neighborhood.</p>
+
+<section>
+<h2>2. Relationship between notice and request counts</h2>
+<div class="number">0.404</div>
+<p>Pearson correlation across matched neighborhoods.</p>
+<p class="note">Correlation ranges from -1 to +1.
+This measures association, not causation. Counts are not adjusted for population.</p>
+</section>
+
+
+<section>
+<h2>1. Top neighborhoods by notice count</h2>
+<p class="note">Notice records. Bars start at zero and scale to the largest value in this chart.</p>
+
+<div class="row">
+<div class="label">CARROLLTON RIDGE</div>
+<div class="track"><div class="bar" style="width: 100%"></div></div>
+<div class="value">744</div>
+</div>
+
+<div class="row">
+<div class="label">BROADWAY EAST</div>
+<div class="track"><div class="bar" style="width: 96.37096774193549%"></div></div>
+<div class="value">717</div>
+</div>
+
+<div class="row">
+<div class="label">SANDTOWN-WINCHESTER</div>
+<div class="track"><div class="bar" style="width: 78.89784946236558%"></div></div>
+<div class="value">587</div>
+</div>
+
+<div class="row">
+<div class="label">HARLEM PARK</div>
+<div class="track"><div class="bar" style="width: 58.87096774193548%"></div></div>
+<div class="value">438</div>
+</div>
+
+<div class="row">
+<div class="label">MIDTOWN-EDMONDSON</div>
+<div class="track"><div class="bar" style="width: 45.16129032258065%"></div></div>
+<div class="value">336</div>
+</div>
+
+<div class="row">
+<div class="label">OLIVER</div>
+<div class="track"><div class="bar" style="width: 44.086021505376344%"></div></div>
+<div class="value">328</div>
+</div>
+
+<div class="row">
+<div class="label">EAST BALTIMORE MIDWAY</div>
+<div class="track"><div class="bar" style="width: 42.33870967741935%"></div></div>
+<div class="value">315</div>
+</div>
+
+<div class="row">
+<div class="label">CENTRAL PARK HEIGHTS</div>
+<div class="track"><div class="bar" style="width: 42.204301075268816%"></div></div>
+<div class="value">314</div>
+</div>
+
+<div class="row">
+<div class="label">PENROSE/FAYETTE STREET OUTREACH</div>
+<div class="track"><div class="bar" style="width: 42.204301075268816%"></div></div>
+<div class="value">314</div>
+</div>
+
+<div class="row">
+<div class="label">MOUNT CLARE</div>
+<div class="track"><div class="bar" style="width: 38.70967741935484%"></div></div>
+<div class="value">288</div>
+</div>
+
+</section>
+
+<section>
+<h2>3. Illegal dumping in the top-ten notice neighborhoods</h2>
+<p class="note">Request records. Bars start at zero and scale to the largest value in this chart.</p>
+
+<div class="row">
+<div class="label">BROADWAY EAST</div>
+<div class="track"><div class="bar" style="width: 100%"></div></div>
+<div class="value">284</div>
+</div>
+
+<div class="row">
+<div class="label">CENTRAL PARK HEIGHTS</div>
+<div class="track"><div class="bar" style="width: 94.36619718309859%"></div></div>
+<div class="value">268</div>
+</div>
+
+<div class="row">
+<div class="label">SANDTOWN-WINCHESTER</div>
+<div class="track"><div class="bar" style="width: 85.91549295774648%"></div></div>
+<div class="value">244</div>
+</div>
+
+<div class="row">
+<div class="label">HARLEM PARK</div>
+<div class="track"><div class="bar" style="width: 75.35211267605634%"></div></div>
+<div class="value">214</div>
+</div>
+
+<div class="row">
+<div class="label">CARROLLTON RIDGE</div>
+<div class="track"><div class="bar" style="width: 73.94366197183099%"></div></div>
+<div class="value">210</div>
+</div>
+
+<div class="row">
+<div class="label">OLIVER</div>
+<div class="track"><div class="bar" style="width: 68.66197183098592%"></div></div>
+<div class="value">195</div>
+</div>
+
+<div class="row">
+<div class="label">PENROSE/FAYETTE STREET OUTREACH</div>
+<div class="track"><div class="bar" style="width: 48.943661971830984%"></div></div>
+<div class="value">139</div>
+</div>
+
+<div class="row">
+<div class="label">EAST BALTIMORE MIDWAY</div>
+<div class="track"><div class="bar" style="width: 48.23943661971831%"></div></div>
+<div class="value">137</div>
+</div>
+
+<div class="row">
+<div class="label">MOUNT CLARE</div>
+<div class="track"><div class="bar" style="width: 36.971830985915496%"></div></div>
+<div class="value">105</div>
+</div>
+
+<div class="row">
+<div class="label">MIDTOWN-EDMONDSON</div>
+<div class="track"><div class="bar" style="width: 21.830985915492956%"></div></div>
+<div class="value">62</div>
+</div>
+
+</section>
+
+<section>
+<h2>4. Unresolved requests by notice group</h2>
+<p class="note">Percent of included requests. Bars start at zero and scale to the largest value in this chart.</p>
+
+<div class="row">
+<div class="label">Below 100 notices</div>
+<div class="track"><div class="bar" style="width: 100%"></div></div>
+<div class="value">1.81%</div>
+</div>
+
+<div class="row">
+<div class="label">100 or more notices</div>
+<div class="track"><div class="bar" style="width: 69.61325966850829%"></div></div>
+<div class="value">1.26%</div>
+</div>
+
+</section>
+
+<section>
+<h2>5. Average recorded closure time</h2>
+<p class="note">Days. Bars start at zero and scale to the largest value in this chart.</p>
+
+<div class="row">
+<div class="label">Below 100 notices</div>
+<div class="track"><div class="bar" style="width: 100%"></div></div>
+<div class="value">13.65 days</div>
+</div>
+
+<div class="row">
+<div class="label">100 or more notices</div>
+<div class="track"><div class="bar" style="width: 85.34798534798534%"></div></div>
+<div class="value">11.65 days</div>
+</div>
+
+</section>
+
+
+<section>
+<h2>Interpretation and limitations</h2>
+<p>Use the findings to guide neighborhood reviews and investigate differences
+in service-request categories. These comparisons do not establish causes or
+adjust for neighborhood size and request mix.</p>
+<p>The 100-notice threshold is a project choice. Notice records are not
+necessarily unique buildings. Dataset time periods may differ.
+Recorded closure does not prove an issue was resolved.</p>
+</section>
+
+<section>
+<h2>Complete results and data-quality counts</h2>
+<pre>Processing both datasets with four workers each...
+311 records: 931324
+311 records missing neighborhood: 274497
+Vacant-building notice records: 11445
+Notice records missing neighborhood: 0
+
+QUESTION 1: Neighborhoods with the most notices
+Neighborhood                                     Notices 311 Requests
+CARROLLTON RIDGE                                     744         6575
+BROADWAY EAST                                        717         9423
+SANDTOWN-WINCHESTER                                  587         8835
+HARLEM PARK                                          438         5839
+MIDTOWN-EDMONDSON                                    336         2892
+OLIVER                                               328         6602
+EAST BALTIMORE MIDWAY                                315         5925
+CENTRAL PARK HEIGHTS                                 314         8490
+PENROSE/FAYETTE STREET OUTREACH                      314         4297
+MOUNT CLARE                                          288         4561
+
+QUESTION 2: Do notice and request counts vary together?
+Matched neighborhoods analyzed: 213
+Pearson correlation: 0.404
+Near &#43;1: higher notice counts tend to accompany higher request counts.
+Near 0: little linear relationship between the counts.
+Near -1: higher notice counts tend to accompany lower request counts.
+This measures association, not cause.
+Raw counts do not account for neighborhood population or size.
+The datasets may represent different time periods.
+
+QUESTION 3: Illegal dumping in the top-ten notice neighborhoods
+All illegal-dumping records: 11888
+Illegal-dumping records missing neighborhood: 4
+Neighborhood                                     Notices      Dumping
+BROADWAY EAST                                        717          284
+CENTRAL PARK HEIGHTS                                 314          268
+SANDTOWN-WINCHESTER                                  587          244
+HARLEM PARK                                          438          214
+CARROLLTON RIDGE                                     744          210
+OLIVER                                               328          195
+PENROSE/FAYETTE STREET OUTREACH                      314          139
+EAST BALTIMORE MIDWAY                                315          137
+MOUNT CLARE                                          288          105
+MIDTOWN-EDMONDSON                                    336           62
+These are neighborhood-level matches, not address-level matches.
+
+QUESTION 4: Unresolved requests by neighborhood notice count
+Unresolved means New, Open, Hold, or Pending in the export.
+Records marked Duplicate excluded: 25723
+Unknown-status records excluded: 0
+Remaining records without a notice-neighborhood match: 311092
+
+Group: Below 100 notices
+Neighborhoods: 178
+Included request records: 436585
+Unresolved request records: 7905
+Unresolved percentage: 1.81%
+
+Group: 100 or more notices
+Neighborhoods: 35
+Included request records: 157924
+Unresolved request records: 1988
+Unresolved percentage: 1.26%
+
+Percentages pool request records within each group.
+Closed (Transferred) does not establish that an issue was fixed.
+
+QUESTION 5: Average recorded closure time by notice count
+Included status: exactly Closed.
+Dates interpreted in Baltimore&#39;s local time zone.
+Other-status records excluded: 73515
+Closed records without a notice-neighborhood match: 295122
+Matched closed records missing dates: 0
+Matched closed records with invalid dates: 0
+Matched closed records with closure before creation: 8122
+
+Group: Below 100 notices
+Included closed records: 407119
+Average closure time: 13.65 days
+
+Group: 100 or more notices
+Included closed records: 147446
+Average closure time: 11.65 days
+
+This measures recorded closure time, not verified issue resolution.
+Request types may differ between groups; averages can be affected by outliers.
+
+Neighborhoods found in both datasets: 213
+Neighborhood                                   311 Records      Notices
+ABELL                                                 1720           16
+ALLENDALE                                             4827           70
+ARCADIA                                               1084            8
+ARLINGTON                                             3104           94
+ASHBURTON                                             2766           12
+AUCHENTOROLY-PARKWOOD                                 2574          109
+BALTIMORE HIGHLANDS                                   4224           37
+BARCLAY                                               4548           40
+BAYVIEW                                               5237            9
+BEECHFIELD                                            2962            4
+BELAIR-EDISON                                        23676           74
+BELAIR-PARKSIDE                                        477            2
+BELVEDERE                                              783            2
+BEREA                                                 5840          132
+BETTER WAVERLY                                        3307           34
+BIDDLE STREET                                         1564           70
+BOLTON HILL                                           3196            1
+BOYD-BOOTH                                            1137          129
+BREWERS HILL                                          2699            2
+BRIDGEVIEW/GREENLAWN                                  2260           20
+BROADWAY EAST                                         9423          717
+BROENING MANOR                                        2061            4
+BROOKLYN                                              9478          140
+BUTCHERS HILL                                         1992            8
+CALLAWAY-GARRISON                                     1576           15
+CAMERON VILLAGE                                        999            1
+CANTON                                               12161           21
+CARE                                                  2959           20
+CARROLL - CAMDEN INDUSTRIAL AREA                      1049            2
+CARROLL-SOUTH HILTON                                  1964           56
+CARROLLTON RIDGE                                      6575          744
+CEDARCROFT                                             450            1
+CEDMONT                                               1716            4
+CEDONIA                                               2080            3
+CENTRAL FOREST PARK                                    716           11
+CENTRAL PARK HEIGHTS                                  8490          314
+CHARLES NORTH                                         2527           13
+CHARLES VILLAGE                                       5705            8
+CHERRY HILL                                           3932           51
+CHESWOLDE                                             2089            1
+CLIFTON PARK                                           446            2
+COLDSTREAM HOMESTEAD MONTEBELLO                      11025          224
+CONCERNED CITIZENS OF FOREST PARK                     1349           25
+COPPIN HEIGHTS/ASH-CO-EAST                            3167          159
+CROSS COUNTRY                                         1994            1
+CURTIS BAY                                            5053          120
+CYLBURN                                               1714           12
+DARLEY PARK                                           1480          106
+DOLFIELD                                              1873           20
+DORCHESTER                                            1920           24
+DOWNTOWN                                             14273           50
+DRUID HEIGHTS                                         3096          127
+DUNBAR-BROADWAY                                        628            2
+EAST ARLINGTON                                        1463            2
+EAST BALTIMORE MIDWAY                                 5925          315
+EASTERWOOD                                            2778          164
+EDGEWOOD                                              2659           39
+EDMONDSON VILLAGE                                     3257           18
+EDNOR GARDENS-LAKESIDE                                5243            6
+ELLWOOD PARK/MONUMENT                                 3640           99
+EVERGREEN                                              245            1
+EVERGREEN LAWN                                        1479            8
+FAIRFIELD AREA                                         584            2
+FAIRMOUNT                                              421            5
+FALLSTAFF                                             3158            3
+FEDERAL HILL                                          4065            3
+FELLS POINT                                           5283           18
+FOREST PARK                                           1576           17
+FOUR BY FOUR                                          3414           26
+FRANKFORD                                             9085           18
+FRANKLIN SQUARE                                       3649          235
+FRANKLINTOWN                                           629            3
+FRANKLINTOWN ROAD                                     2979          154
+GARWYN OAKS                                            930           10
+GAY STREET                                            1195           18
+GLEN                                                  4951            5
+GLEN OAKS                                             3156            4
+GRACELAND PARK                                        1802            8
+GREEKTOWN                                             6433            9
+GREENMOUNT WEST                                       2552            4
+GREENSPRING                                           3166          120
+GROVE PARK                                            1300            3
+GUILFORD                                              1638            3
+GWYNNS FALLS                                          1371           36
+HAMILTON                                              4930           13
+HAMILTON HILLS                                        4922            7
+HAMPDEN                                               7878           22
+HANLON-LONGWOOD                                       3142           31
+HARBOR EAST                                            540            1
+HARLEM PARK                                           5839          438
+HARWOOD                                               2435           22
+HIGHLANDTOWN                                          3719           12
+HILLEN                                                2222            6
+HOLLINS MARKET                                        2436           49
+HOMELAND                                              1903            1
+HOWARD PARK                                           3942           29
+HUNTING RIDGE                                          999            2
+IDLEWOOD                                              2983            3
+IRVINGTON                                             4275           40
+JOHNSTON SQUARE                                       2346           81
+JONES FALLS AREA                                       692            1
+JONESTOWN                                             1230           17
+KENILWORTH PARK                                       1838            6
+KERNEWOOD                                              594            6
+KESWICK                                                362            1
+KRESSON                                                920           11
+LAKE WALKER                                           1206            1
+LAKELAND                                              2371           16
+LANGSTON HUGHES                                       1644           38
+LAURAVILLE                                            3176            8
+LEVINDALE                                              632            2
+LIBERTY SQUARE                                        1314            9
+LITTLE ITALY                                          1095            7
+LOCH RAVEN                                            3591            7
+LOCUST POINT                                          2194            2
+LUCILLE PARK                                           947           33
+MADISON PARK                                          2008           20
+MADISON-EASTEND                                       2799           67
+MAYFIELD                                               786            1
+MCELDERRY PARK                                        7683          119
+MEDFORD                                               1245            2
+MID-GOVANS                                            1813           12
+MID-TOWN BELVEDERE                                    3241            7
+MIDDLE EAST                                           2894           34
+MIDTOWN-EDMONDSON                                     2892          336
+MILLHILL                                              2170          123
+MILTON-MONTFORD                                       2489           57
+MONDAWMIN                                             4440          279
+MORAVIA-WALTHER                                       1009            2
+MORRELL PARK                                          6529           41
+MOSHER                                                2215          172
+MOUNT CLARE                                           4561          288
+MOUNT HOLLY                                           1446           32
+MOUNT VERNON                                          3555            5
+MOUNT WASHINGTON                                      3025            5
+MOUNT WINANS                                           680           12
+NEW NORTHWOOD                                         4065            2
+NORTH HARFORD ROAD                                    3554           11
+NORTHWEST COMMUNITY ACTION                            2205          147
+OAKENSHAWE                                             732            6
+OLD GOUCHER                                           1156            2
+OLDTOWN                                               1797           34
+OLIVER                                                6602          328
+ORANGEVILLE                                            674            3
+ORANGEVILLE INDUSTRIAL AREA                            288            1
+PANWAY/BRADDISH AVENUE                                1377           10
+PARK CIRCLE                                           4881          169
+PARKLANE                                              1687           14
+PARKSIDE                                              1813            3
+PARKWAY                                                749           10
+PATTERSON PARK NEIGHBORHOOD                           7140           26
+PATTERSON PLACE                                       1770           10
+PEN LUCY                                              2609           24
+PENN NORTH                                            3779          252
+PENROSE/FAYETTE STREET OUTREACH                       4297          314
+PIMLICO GOOD NEIGHBORS                                1056           14
+PLEASANT VIEW GARDENS                                  363            2
+POPPLETON                                             4856           41
+PULASKI INDUSTRIAL AREA                               1417            2
+RADNOR-WINSTON                                         537            3
+RAMBLEWOOD                                            2349            2
+REISTERSTOWN STATION                                  1038            1
+REMINGTON                                             3899            7
+RESERVOIR HILL                                        5586           40
+RICHNOR SPRINGS                                       1310            5
+RIDGELY&#39;S DELIGHT                                     1244            3
+RIVERSIDE                                             5963            1
+ROGNEL HEIGHTS                                        1777            8
+ROLAND PARK                                           2736            1
+ROSEBANK                                               673            2
+ROSEMONT                                              3148          117
+ROSEMONT EAST                                         1350            3
+ROSEMONT HOMEOWNERS/TENANTS                           1946           84
+SAINT AGNES                                            449            2
+SAINT HELENA                                           606            2
+SAINT JOSEPHS                                         2205           61
+SAINT PAUL                                             125            3
+SANDTOWN-WINCHESTER                                   8835          587
+SETON HILL                                            1194            5
+SHARP-LEADENHALL                                      1005            3
+SHIPLEY HILL                                          3128          260
+SOUTH BALTIMORE                                       3864            1
+SOUTH CLIFTON PARK                                    1833           74
+STONEWOOD-PENTWOOD-WINSTON                            1043            1
+TEN HILLS                                              808            2
+TOWANDA-GRANTLEY                                      1871           61
+TREMONT                                               1260            2
+UNION SQUARE                                          2010           71
+UNIVERSITY OF MARYLAND                                 767            3
+UPPER FELLS POINT                                     5093            8
+UPTON                                                 5690          251
+VIOLETVILLE                                           1921            2
+WALBROOK                                              3904          105
+WALTHERSON                                            5185           16
+WASHINGTON HILL                                       2236           16
+WASHINGTON VILLAGE/PIGTOWN                            9285           88
+WAVERLY                                               3337           17
+WEST ARLINGTON                                        1590           10
+WEST FOREST PARK                                      1471           16
+WEST HILLS                                            2373            1
+WESTFIELD                                             2205            4
+WESTGATE                                              1695            4
+WESTPORT                                              1776          127
+WILHELM PARK                                           826            1
+WILSON PARK                                           1492           19
+WINCHESTER                                            1898           90
+WINDSOR HILLS                                         1438           15
+WINSTON-GOVANS                                        1832           11
+WOODBERRY                                             1609            3
+WOODBOURNE-MCCABE                                     1685           17
+WOODMERE                                              3005           17
+WYMAN PARK                                             923            2
+YALE HEIGHTS                                          2042            2
+</pre>
+</section>
+</main>
+</body>
+</html>

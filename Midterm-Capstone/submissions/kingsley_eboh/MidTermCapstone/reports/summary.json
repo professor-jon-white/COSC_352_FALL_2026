@@ -1,0 +1,2623 @@
+{
+  "generated_at": "2026-10-11T22:00:34-04:00",
+  "elapsed": "7.581s",
+  "workers": 8,
+  "offline_example": false,
+  "replayed_saved_raw_data": true,
+  "request_count": 692663,
+  "vacant_building_rehab_count": 12647,
+  "nonclosed_311_request_count": 30431,
+  "matched_neighborhoods": 234,
+  "request_records_with_neighborhood": 692663,
+  "vacant_records_with_neighborhood": 12647,
+  "spearman_rank_correlation": 0.7700733881868451,
+  "spearman_interpretation": "strong positive association",
+  "high_rehab_sites_cutoff": 69,
+  "neighborhoods": [
+    {
+      "neighborhood": "Belair-Edison",
+      "requests_2026": 24775,
+      "nonclosed_311_requests": 650,
+      "vacant_building_rehab_locations": 373,
+      "requests_per_100_rehab_sites": 6642.091152815014,
+      "nonclosed_rate": 2.623612512613522,
+      "joint_index": 12.763554902450373
+    },
+    {
+      "neighborhood": "Coldstream Homestead Montebello",
+      "requests_2026": 16414,
+      "nonclosed_311_requests": 451,
+      "vacant_building_rehab_locations": 367,
+      "requests_per_100_rehab_sites": 4472.479564032697,
+      "nonclosed_rate": 2.7476544413305715,
+      "joint_index": 9.653329509605543
+    },
+    {
+      "neighborhood": "Broadway East",
+      "requests_2026": 9466,
+      "nonclosed_311_requests": 292,
+      "vacant_building_rehab_locations": 445,
+      "requests_per_100_rehab_sites": 2127.191011235955,
+      "nonclosed_rate": 3.08472427635749,
+      "joint_index": 8.259172628704013
+    },
+    {
+      "neighborhood": "McElderry Park",
+      "requests_2026": 8905,
+      "nonclosed_311_requests": 259,
+      "vacant_building_rehab_locations": 382,
+      "requests_per_100_rehab_sites": 2331.151832460733,
+      "nonclosed_rate": 2.9084783829309377,
+      "joint_index": 7.152517986691067
+    },
+    {
+      "neighborhood": "Brooklyn",
+      "requests_2026": 11883,
+      "nonclosed_311_requests": 332,
+      "vacant_building_rehab_locations": 253,
+      "requests_per_100_rehab_sites": 4696.837944664032,
+      "nonclosed_rate": 2.793907262475806,
+      "joint_index": 6.379134044682206
+    },
+    {
+      "neighborhood": "Oliver",
+      "requests_2026": 7544,
+      "nonclosed_311_requests": 275,
+      "vacant_building_rehab_locations": 337,
+      "requests_per_100_rehab_sites": 2238.575667655786,
+      "nonclosed_rate": 3.6452810180275717,
+      "joint_index": 6.014717223963989
+    },
+    {
+      "neighborhood": "Central Park Heights",
+      "requests_2026": 10047,
+      "nonclosed_311_requests": 272,
+      "vacant_building_rehab_locations": 265,
+      "requests_per_100_rehab_sites": 3791.3207547169814,
+      "nonclosed_rate": 2.707275803722504,
+      "joint_index": 5.887198390258437
+    },
+    {
+      "neighborhood": "Washington Village/Pigtown",
+      "requests_2026": 9574,
+      "nonclosed_311_requests": 313,
+      "vacant_building_rehab_locations": 248,
+      "requests_per_100_rehab_sites": 3860.483870967742,
+      "nonclosed_rate": 3.269270942134949,
+      "joint_index": 5.472248417509188
+    },
+    {
+      "neighborhood": "Sandtown-Winchester",
+      "requests_2026": 8988,
+      "nonclosed_311_requests": 293,
+      "vacant_building_rehab_locations": 221,
+      "requests_per_100_rehab_sites": 4066.968325791855,
+      "nonclosed_rate": 3.2599020916777928,
+      "joint_index": 4.87297545599807
+    },
+    {
+      "neighborhood": "Canton",
+      "requests_2026": 13051,
+      "nonclosed_311_requests": 783,
+      "vacant_building_rehab_locations": 82,
+      "requests_per_100_rehab_sites": 15915.853658536585,
+      "nonclosed_rate": 5.999540265113785,
+      "joint_index": 4.34858240362242
+    },
+    {
+      "neighborhood": "Frankford",
+      "requests_2026": 9174,
+      "nonclosed_311_requests": 437,
+      "vacant_building_rehab_locations": 157,
+      "requests_per_100_rehab_sites": 5843.3121019108285,
+      "nonclosed_rate": 4.763461957706562,
+      "joint_index": 4.022163902410263
+    },
+    {
+      "neighborhood": "Downtown",
+      "requests_2026": 13502,
+      "nonclosed_311_requests": 834,
+      "vacant_building_rehab_locations": 33,
+      "requests_per_100_rehab_sites": 40915.15151515151,
+      "nonclosed_rate": 6.176862687009332,
+      "joint_index": 3.808797466221431
+    },
+    {
+      "neighborhood": "Carrollton Ridge",
+      "requests_2026": 6540,
+      "nonclosed_311_requests": 237,
+      "vacant_building_rehab_locations": 194,
+      "requests_per_100_rehab_sites": 3371.134020618557,
+      "nonclosed_rate": 3.623853211009174,
+      "joint_index": 3.6002213245607106
+    },
+    {
+      "neighborhood": "Ellwood Park/Monument",
+      "requests_2026": 4927,
+      "nonclosed_311_requests": 136,
+      "vacant_building_rehab_locations": 228,
+      "requests_per_100_rehab_sites": 2160.964912280702,
+      "nonclosed_rate": 2.760300385630201,
+      "joint_index": 3.504536783570886
+    },
+    {
+      "neighborhood": "East Baltimore Midway",
+      "requests_2026": 6471,
+      "nonclosed_311_requests": 295,
+      "vacant_building_rehab_locations": 182,
+      "requests_per_100_rehab_sites": 3555.4945054945056,
+      "nonclosed_rate": 4.5588008035852265,
+      "joint_index": 3.4031228067452264
+    },
+    {
+      "neighborhood": "Berea",
+      "requests_2026": 7015,
+      "nonclosed_311_requests": 213,
+      "vacant_building_rehab_locations": 166,
+      "requests_per_100_rehab_sites": 4225.903614457831,
+      "nonclosed_rate": 3.0363506771204563,
+      "joint_index": 3.370364538132542
+    },
+    {
+      "neighborhood": "Patterson Park Neighborhood",
+      "requests_2026": 7540,
+      "nonclosed_311_requests": 314,
+      "vacant_building_rehab_locations": 143,
+      "requests_per_100_rehab_sites": 5272.727272727273,
+      "nonclosed_rate": 4.164456233421751,
+      "joint_index": 3.2303182108519453
+    },
+    {
+      "neighborhood": "Harlem Park",
+      "requests_2026": 6102,
+      "nonclosed_311_requests": 193,
+      "vacant_building_rehab_locations": 177,
+      "requests_per_100_rehab_sites": 3447.4576271186443,
+      "nonclosed_rate": 3.162897410685021,
+      "joint_index": 3.1979307722987977
+    },
+    {
+      "neighborhood": "Middle East",
+      "requests_2026": 2801,
+      "nonclosed_311_requests": 137,
+      "vacant_building_rehab_locations": 238,
+      "requests_per_100_rehab_sites": 1176.890756302521,
+      "nonclosed_rate": 4.891110317743663,
+      "joint_index": 2.8790185588714996
+    },
+    {
+      "neighborhood": "Hampden",
+      "requests_2026": 9058,
+      "nonclosed_311_requests": 381,
+      "vacant_building_rehab_locations": 73,
+      "requests_per_100_rehab_sites": 12408.219178082192,
+      "nonclosed_rate": 4.206226540075072,
+      "joint_index": 2.7752173439547905
+    },
+    {
+      "neighborhood": "Reservoir Hill",
+      "requests_2026": 5737,
+      "nonclosed_311_requests": 258,
+      "vacant_building_rehab_locations": 156,
+      "requests_per_100_rehab_sites": 3677.5641025641025,
+      "nonclosed_rate": 4.497123932368834,
+      "joint_index": 2.76466369600651
+    },
+    {
+      "neighborhood": "Upton",
+      "requests_2026": 5934,
+      "nonclosed_311_requests": 304,
+      "vacant_building_rehab_locations": 145,
+      "requests_per_100_rehab_sites": 4092.4137931034484,
+      "nonclosed_rate": 5.123019885406134,
+      "joint_index": 2.6781218884421927
+    },
+    {
+      "neighborhood": "Curtis Bay",
+      "requests_2026": 6225,
+      "nonclosed_311_requests": 178,
+      "vacant_building_rehab_locations": 116,
+      "requests_per_100_rehab_sites": 5366.379310344828,
+      "nonclosed_rate": 2.859437751004016,
+      "joint_index": 2.3673676054760424
+    },
+    {
+      "neighborhood": "Barclay",
+      "requests_2026": 4415,
+      "nonclosed_311_requests": 111,
+      "vacant_building_rehab_locations": 161,
+      "requests_per_100_rehab_sites": 2742.2360248447203,
+      "nonclosed_rate": 2.5141562853907136,
+      "joint_index": 2.3582248720505348
+    },
+    {
+      "neighborhood": "Milton-Montford",
+      "requests_2026": 2640,
+      "nonclosed_311_requests": 93,
+      "vacant_building_rehab_locations": 201,
+      "requests_per_100_rehab_sites": 1313.4328358208954,
+      "nonclosed_rate": 3.522727272727273,
+      "joint_index": 2.290015986375269
+    },
+    {
+      "neighborhood": "Allendale",
+      "requests_2026": 5370,
+      "nonclosed_311_requests": 178,
+      "vacant_building_rehab_locations": 125,
+      "requests_per_100_rehab_sites": 4296,
+      "nonclosed_rate": 3.3147113594040967,
+      "joint_index": 2.1872220787836167
+    },
+    {
+      "neighborhood": "Baltimore Highlands",
+      "requests_2026": 4505,
+      "nonclosed_311_requests": 117,
+      "vacant_building_rehab_locations": 140,
+      "requests_per_100_rehab_sites": 3217.8571428571427,
+      "nonclosed_rate": 2.597114317425083,
+      "joint_index": 2.0895302620936067
+    },
+    {
+      "neighborhood": "Morrell Park",
+      "requests_2026": 5974,
+      "nonclosed_311_requests": 203,
+      "vacant_building_rehab_locations": 94,
+      "requests_per_100_rehab_sites": 6355.31914893617,
+      "nonclosed_rate": 3.3980582524271843,
+      "joint_index": 1.9609889556522284
+    },
+    {
+      "neighborhood": "Penrose/Fayette Street Outreach",
+      "requests_2026": 4350,
+      "nonclosed_311_requests": 142,
+      "vacant_building_rehab_locations": 129,
+      "requests_per_100_rehab_sites": 3372.093023255814,
+      "nonclosed_rate": 3.264367816091954,
+      "joint_index": 1.875670854199517
+    },
+    {
+      "neighborhood": "Franklin Square",
+      "requests_2026": 4017,
+      "nonclosed_311_requests": 135,
+      "vacant_building_rehab_locations": 136,
+      "requests_per_100_rehab_sites": 2953.676470588235,
+      "nonclosed_rate": 3.3607169529499625,
+      "joint_index": 1.855641312537656
+    },
+    {
+      "neighborhood": "Mondawmin",
+      "requests_2026": 4455,
+      "nonclosed_311_requests": 175,
+      "vacant_building_rehab_locations": 119,
+      "requests_per_100_rehab_sites": 3743.6974789915967,
+      "nonclosed_rate": 3.9281705948372614,
+      "joint_index": 1.7701979701873372
+    },
+    {
+      "neighborhood": "Madison-Eastend",
+      "requests_2026": 2813,
+      "nonclosed_311_requests": 103,
+      "vacant_building_rehab_locations": 160,
+      "requests_per_100_rehab_sites": 1758.125,
+      "nonclosed_rate": 3.661571276217561,
+      "joint_index": 1.7644399969113649
+    },
+    {
+      "neighborhood": "Mount Clare",
+      "requests_2026": 3676,
+      "nonclosed_311_requests": 131,
+      "vacant_building_rehab_locations": 131,
+      "requests_per_100_rehab_sites": 2806.1068702290077,
+      "nonclosed_rate": 3.563656147986942,
+      "joint_index": 1.6605768144810955
+    },
+    {
+      "neighborhood": "Waltherson",
+      "requests_2026": 4826,
+      "nonclosed_311_requests": 310,
+      "vacant_building_rehab_locations": 100,
+      "requests_per_100_rehab_sites": 4826,
+      "nonclosed_rate": 6.423539162867799,
+      "joint_index": 1.6318306509521392
+    },
+    {
+      "neighborhood": "Hamilton Hills",
+      "requests_2026": 5847,
+      "nonclosed_311_requests": 307,
+      "vacant_building_rehab_locations": 69,
+      "requests_per_100_rehab_sites": 8473.91304347826,
+      "nonclosed_rate": 5.2505558406020185,
+      "joint_index": 1.5564254804841469
+    },
+    {
+      "neighborhood": "Greektown",
+      "requests_2026": 7274,
+      "nonclosed_311_requests": 188,
+      "vacant_building_rehab_locations": 27,
+      "requests_per_100_rehab_sites": 26940.74074074074,
+      "nonclosed_rate": 2.5845477041517735,
+      "joint_index": 1.4700733276476403
+    },
+    {
+      "neighborhood": "Park Circle",
+      "requests_2026": 3776,
+      "nonclosed_311_requests": 120,
+      "vacant_building_rehab_locations": 115,
+      "requests_per_100_rehab_sites": 3283.478260869565,
+      "nonclosed_rate": 3.1779661016949152,
+      "joint_index": 1.4672247545433565
+    },
+    {
+      "neighborhood": "CARE",
+      "requests_2026": 2727,
+      "nonclosed_311_requests": 124,
+      "vacant_building_rehab_locations": 137,
+      "requests_per_100_rehab_sites": 1990.5109489051094,
+      "nonclosed_rate": 4.5471213788045475,
+      "joint_index": 1.4033963576947133
+    },
+    {
+      "neighborhood": "Walbrook",
+      "requests_2026": 4102,
+      "nonclosed_311_requests": 131,
+      "vacant_building_rehab_locations": 100,
+      "requests_per_100_rehab_sites": 4102,
+      "nonclosed_rate": 3.1935641150658216,
+      "joint_index": 1.3699614957284014
+    },
+    {
+      "neighborhood": "Better Waverly",
+      "requests_2026": 3507,
+      "nonclosed_311_requests": 160,
+      "vacant_building_rehab_locations": 115,
+      "requests_per_100_rehab_sites": 3049.5652173913045,
+      "nonclosed_rate": 4.562303963501568,
+      "joint_index": 1.3699280656549786
+    },
+    {
+      "neighborhood": "Bayview",
+      "requests_2026": 7395,
+      "nonclosed_311_requests": 81,
+      "vacant_building_rehab_locations": 15,
+      "requests_per_100_rehab_sites": 49300,
+      "nonclosed_rate": 1.0953346855983772,
+      "joint_index": 1.3416973781919768
+    },
+    {
+      "neighborhood": "Coppin Heights/Ash-Co-East",
+      "requests_2026": 3363,
+      "nonclosed_311_requests": 112,
+      "vacant_building_rehab_locations": 116,
+      "requests_per_100_rehab_sites": 2899.137931034483,
+      "nonclosed_rate": 3.330359797799584,
+      "joint_index": 1.3321887073402174
+    },
+    {
+      "neighborhood": "Druid Heights",
+      "requests_2026": 3499,
+      "nonclosed_311_requests": 101,
+      "vacant_building_rehab_locations": 112,
+      "requests_per_100_rehab_sites": 3124.1071428571427,
+      "nonclosed_rate": 2.886539011146042,
+      "joint_index": 1.3239991401870463
+    },
+    {
+      "neighborhood": "Waverly",
+      "requests_2026": 4045,
+      "nonclosed_311_requests": 131,
+      "vacant_building_rehab_locations": 91,
+      "requests_per_100_rehab_sites": 4445.054945054945,
+      "nonclosed_rate": 3.238566131025958,
+      "joint_index": 1.220238694293688
+    },
+    {
+      "neighborhood": "Upper Fells Point",
+      "requests_2026": 5466,
+      "nonclosed_311_requests": 227,
+      "vacant_building_rehab_locations": 54,
+      "requests_per_100_rehab_sites": 10122.222222222223,
+      "nonclosed_rate": 4.152945481156238,
+      "joint_index": 1.203441927825017
+    },
+    {
+      "neighborhood": "Edgewood",
+      "requests_2026": 2989,
+      "nonclosed_311_requests": 111,
+      "vacant_building_rehab_locations": 116,
+      "requests_per_100_rehab_sites": 2576.7241379310344,
+      "nonclosed_rate": 3.713616594178655,
+      "joint_index": 1.1969137569898336
+    },
+    {
+      "neighborhood": "Howard Park",
+      "requests_2026": 3891,
+      "nonclosed_311_requests": 218,
+      "vacant_building_rehab_locations": 91,
+      "requests_per_100_rehab_sites": 4275.824175824176,
+      "nonclosed_rate": 5.602672834746851,
+      "joint_index": 1.1645372441494124
+    },
+    {
+      "neighborhood": "Greenspring",
+      "requests_2026": 3813,
+      "nonclosed_311_requests": 123,
+      "vacant_building_rehab_locations": 91,
+      "requests_per_100_rehab_sites": 4190.10989010989,
+      "nonclosed_rate": 3.225806451612903,
+      "joint_index": 1.1363248213490649
+    },
+    {
+      "neighborhood": "Four By Four",
+      "requests_2026": 2683,
+      "nonclosed_311_requests": 73,
+      "vacant_building_rehab_locations": 118,
+      "requests_per_100_rehab_sites": 2273.728813559322,
+      "nonclosed_rate": 2.720834886321282,
+      "joint_index": 1.1149244812525385
+    },
+    {
+      "neighborhood": "Johnston Square",
+      "requests_2026": 3298,
+      "nonclosed_311_requests": 140,
+      "vacant_building_rehab_locations": 101,
+      "requests_per_100_rehab_sites": 3265.3465346534654,
+      "nonclosed_rate": 4.244996967859309,
+      "joint_index": 1.0935016367953156
+    },
+    {
+      "neighborhood": "Rosemont",
+      "requests_2026": 3723,
+      "nonclosed_311_requests": 101,
+      "vacant_building_rehab_locations": 88,
+      "requests_per_100_rehab_sites": 4230.681818181818,
+      "nonclosed_rate": 2.71286596830513,
+      "joint_index": 1.0607366821679465
+    },
+    {
+      "neighborhood": "Arlington",
+      "requests_2026": 3515,
+      "nonclosed_311_requests": 91,
+      "vacant_building_rehab_locations": 90,
+      "requests_per_100_rehab_sites": 3905.5555555555557,
+      "nonclosed_rate": 2.588904694167852,
+      "joint_index": 1.0141937837951907
+    },
+    {
+      "neighborhood": "Penn North",
+      "requests_2026": 3620,
+      "nonclosed_311_requests": 130,
+      "vacant_building_rehab_locations": 84,
+      "requests_per_100_rehab_sites": 4309.523809523809,
+      "nonclosed_rate": 3.591160220994475,
+      "joint_index": 0.9661013579726854
+    },
+    {
+      "neighborhood": "Irvington",
+      "requests_2026": 4005,
+      "nonclosed_311_requests": 196,
+      "vacant_building_rehab_locations": 74,
+      "requests_per_100_rehab_sites": 5412.1621621621625,
+      "nonclosed_rate": 4.893882646691636,
+      "joint_index": 0.9619038378591886
+    },
+    {
+      "neighborhood": "Highlandtown",
+      "requests_2026": 4152,
+      "nonclosed_311_requests": 161,
+      "vacant_building_rehab_locations": 64,
+      "requests_per_100_rehab_sites": 6487.5,
+      "nonclosed_rate": 3.877649325626204,
+      "joint_index": 0.8716222584318115
+    },
+    {
+      "neighborhood": "Hamilton",
+      "requests_2026": 4655,
+      "nonclosed_311_requests": 233,
+      "vacant_building_rehab_locations": 51,
+      "requests_per_100_rehab_sites": 9127.450980392157,
+      "nonclosed_rate": 5.005370569280344,
+      "joint_index": 0.8670697266047899
+    },
+    {
+      "neighborhood": "Ednor Gardens-Lakeside",
+      "requests_2026": 5072,
+      "nonclosed_311_requests": 237,
+      "vacant_building_rehab_locations": 36,
+      "requests_per_100_rehab_sites": 14088.888888888889,
+      "nonclosed_rate": 4.672712933753943,
+      "joint_index": 0.8027209610569069
+    },
+    {
+      "neighborhood": "Midtown-Edmondson",
+      "requests_2026": 2730,
+      "nonclosed_311_requests": 92,
+      "vacant_building_rehab_locations": 94,
+      "requests_per_100_rehab_sites": 2904.255319148936,
+      "nonclosed_rate": 3.36996336996337,
+      "joint_index": 0.7876415253403428
+    },
+    {
+      "neighborhood": "Greenmount West",
+      "requests_2026": 2842,
+      "nonclosed_311_requests": 142,
+      "vacant_building_rehab_locations": 91,
+      "requests_per_100_rehab_sites": 3123.076923076923,
+      "nonclosed_rate": 4.9964813511611545,
+      "joint_index": 0.7851163272575603
+    },
+    {
+      "neighborhood": "Hollins Market",
+      "requests_2026": 2827,
+      "nonclosed_311_requests": 137,
+      "vacant_building_rehab_locations": 90,
+      "requests_per_100_rehab_sites": 3141.1111111111113,
+      "nonclosed_rate": 4.846126636009904,
+      "joint_index": 0.765345746786998
+    },
+    {
+      "neighborhood": "Auchentoroly-Parkwood",
+      "requests_2026": 3058,
+      "nonclosed_311_requests": 106,
+      "vacant_building_rehab_locations": 82,
+      "requests_per_100_rehab_sites": 3729.268292682927,
+      "nonclosed_rate": 3.4663178548070634,
+      "joint_index": 0.7341370056240628
+    },
+    {
+      "neighborhood": "Charles Village",
+      "requests_2026": 5300,
+      "nonclosed_311_requests": 293,
+      "vacant_building_rehab_locations": 25,
+      "requests_per_100_rehab_sites": 21200,
+      "nonclosed_rate": 5.528301886792453,
+      "joint_index": 0.7273917830670873
+    },
+    {
+      "neighborhood": "Millhill",
+      "requests_2026": 2548,
+      "nonclosed_311_requests": 66,
+      "vacant_building_rehab_locations": 94,
+      "requests_per_100_rehab_sites": 2710.6382978723404,
+      "nonclosed_rate": 2.5902668759811616,
+      "joint_index": 0.7218125388061988
+    },
+    {
+      "neighborhood": "Hanlon-Longwood",
+      "requests_2026": 3380,
+      "nonclosed_311_requests": 134,
+      "vacant_building_rehab_locations": 73,
+      "requests_per_100_rehab_sites": 4630.13698630137,
+      "nonclosed_rate": 3.964497041420118,
+      "joint_index": 0.7214976431807811
+    },
+    {
+      "neighborhood": "Shipley Hill",
+      "requests_2026": 3310,
+      "nonclosed_311_requests": 132,
+      "vacant_building_rehab_locations": 74,
+      "requests_per_100_rehab_sites": 4472.972972972973,
+      "nonclosed_rate": 3.987915407854985,
+      "joint_index": 0.7105239167535289
+    },
+    {
+      "neighborhood": "Remington",
+      "requests_2026": 3721,
+      "nonclosed_311_requests": 284,
+      "vacant_building_rehab_locations": 63,
+      "requests_per_100_rehab_sites": 5906.349206349207,
+      "nonclosed_rate": 7.63235689330825,
+      "joint_index": 0.7013854230260628
+    },
+    {
+      "neighborhood": "Riverside",
+      "requests_2026": 5278,
+      "nonclosed_311_requests": 375,
+      "vacant_building_rehab_locations": 21,
+      "requests_per_100_rehab_sites": 25133.333333333332,
+      "nonclosed_rate": 7.104964001515726,
+      "joint_index": 0.6620539748568022
+    },
+    {
+      "neighborhood": "Edmondson Village",
+      "requests_2026": 3603,
+      "nonclosed_311_requests": 155,
+      "vacant_building_rehab_locations": 63,
+      "requests_per_100_rehab_sites": 5719.047619047619,
+      "nonclosed_rate": 4.301970580072162,
+      "joint_index": 0.6587050910973321
+    },
+    {
+      "neighborhood": "Poppleton",
+      "requests_2026": 4399,
+      "nonclosed_311_requests": 82,
+      "vacant_building_rehab_locations": 42,
+      "requests_per_100_rehab_sites": 10473.809523809523,
+      "nonclosed_rate": 1.8640600136394636,
+      "joint_index": 0.6453690772563694
+    },
+    {
+      "neighborhood": "Harwood",
+      "requests_2026": 2283,
+      "nonclosed_311_requests": 101,
+      "vacant_building_rehab_locations": 94,
+      "requests_per_100_rehab_sites": 2428.723404255319,
+      "nonclosed_rate": 4.424003504161192,
+      "joint_index": 0.6259626408306594
+    },
+    {
+      "neighborhood": "Glen",
+      "requests_2026": 4364,
+      "nonclosed_311_requests": 264,
+      "vacant_building_rehab_locations": 39,
+      "requests_per_100_rehab_sites": 11189.74358974359,
+      "nonclosed_rate": 6.049495875343721,
+      "joint_index": 0.5896743131267783
+    },
+    {
+      "neighborhood": "Fells Point",
+      "requests_2026": 4603,
+      "nonclosed_311_requests": 277,
+      "vacant_building_rehab_locations": 32,
+      "requests_per_100_rehab_sites": 14384.375,
+      "nonclosed_rate": 6.01781446882468,
+      "joint_index": 0.5757042683369384
+    },
+    {
+      "neighborhood": "Woodmere",
+      "requests_2026": 3471,
+      "nonclosed_311_requests": 111,
+      "vacant_building_rehab_locations": 56,
+      "requests_per_100_rehab_sites": 6198.214285714285,
+      "nonclosed_rate": 3.197925669835782,
+      "joint_index": 0.5105451891417371
+    },
+    {
+      "neighborhood": "Franklintown Road",
+      "requests_2026": 3416,
+      "nonclosed_311_requests": 157,
+      "vacant_building_rehab_locations": 56,
+      "requests_per_100_rehab_sites": 6100,
+      "nonclosed_rate": 4.596018735362998,
+      "joint_index": 0.4906518140902101
+    },
+    {
+      "neighborhood": "New Northwood",
+      "requests_2026": 4798,
+      "nonclosed_311_requests": 141,
+      "vacant_building_rehab_locations": 18,
+      "requests_per_100_rehab_sites": 26655.555555555555,
+      "nonclosed_rate": 2.9387244685285534,
+      "joint_index": 0.4454037216739468
+    },
+    {
+      "neighborhood": "Mosher",
+      "requests_2026": 3213,
+      "nonclosed_311_requests": 100,
+      "vacant_building_rehab_locations": 57,
+      "requests_per_100_rehab_sites": 5636.8421052631575,
+      "nonclosed_rate": 3.1123560535325243,
+      "joint_index": 0.4315722898110834
+    },
+    {
+      "neighborhood": "Saint Josephs",
+      "requests_2026": 2934,
+      "nonclosed_311_requests": 116,
+      "vacant_building_rehab_locations": 61,
+      "requests_per_100_rehab_sites": 4809.836065573771,
+      "nonclosed_rate": 3.9536468984321744,
+      "joint_index": 0.38803908183028424
+    },
+    {
+      "neighborhood": "Lakeland",
+      "requests_2026": 2902,
+      "nonclosed_311_requests": 126,
+      "vacant_building_rehab_locations": 60,
+      "requests_per_100_rehab_sites": 4836.666666666667,
+      "nonclosed_rate": 4.341833218470021,
+      "joint_index": 0.36211963998015906
+    },
+    {
+      "neighborhood": "Loch Raven",
+      "requests_2026": 4388,
+      "nonclosed_311_requests": 174,
+      "vacant_building_rehab_locations": 21,
+      "requests_per_100_rehab_sites": 20895.238095238095,
+      "nonclosed_rate": 3.9653600729261624,
+      "joint_index": 0.34014299675027376
+    },
+    {
+      "neighborhood": "Westport",
+      "requests_2026": 3630,
+      "nonclosed_311_requests": 131,
+      "vacant_building_rehab_locations": 38,
+      "requests_per_100_rehab_sites": 9552.631578947368,
+      "nonclosed_rate": 3.608815426997245,
+      "joint_index": 0.3098430660735262
+    },
+    {
+      "neighborhood": "Northwest Community Action",
+      "requests_2026": 2420,
+      "nonclosed_311_requests": 80,
+      "vacant_building_rehab_locations": 68,
+      "requests_per_100_rehab_sites": 3558.823529411765,
+      "nonclosed_rate": 3.3057851239669422,
+      "joint_index": 0.30254225136248897
+    },
+    {
+      "neighborhood": "Cherry Hill",
+      "requests_2026": 3322,
+      "nonclosed_311_requests": 167,
+      "vacant_building_rehab_locations": 45,
+      "requests_per_100_rehab_sites": 7382.222222222223,
+      "nonclosed_rate": 5.027092113184828,
+      "joint_index": 0.2988559676169049
+    },
+    {
+      "neighborhood": "Easterwood",
+      "requests_2026": 2220,
+      "nonclosed_311_requests": 82,
+      "vacant_building_rehab_locations": 72,
+      "requests_per_100_rehab_sites": 3083.3333333333335,
+      "nonclosed_rate": 3.6936936936936937,
+      "joint_index": 0.28758316391024685
+    },
+    {
+      "neighborhood": "North Harford Road",
+      "requests_2026": 3925,
+      "nonclosed_311_requests": 225,
+      "vacant_building_rehab_locations": 26,
+      "requests_per_100_rehab_sites": 15096.153846153846,
+      "nonclosed_rate": 5.732484076433121,
+      "joint_index": 0.24440252132633
+    },
+    {
+      "neighborhood": "Pen Lucy",
+      "requests_2026": 2460,
+      "nonclosed_311_requests": 140,
+      "vacant_building_rehab_locations": 60,
+      "requests_per_100_rehab_sites": 4100,
+      "nonclosed_rate": 5.691056910569106,
+      "joint_index": 0.2022492441115236
+    },
+    {
+      "neighborhood": "Lauraville",
+      "requests_2026": 3014,
+      "nonclosed_311_requests": 199,
+      "vacant_building_rehab_locations": 46,
+      "requests_per_100_rehab_sites": 6552.173913043478,
+      "nonclosed_rate": 6.6025215660252154,
+      "joint_index": 0.20179818187577206
+    },
+    {
+      "neighborhood": "Woodbourne-McCabe",
+      "requests_2026": 2029,
+      "nonclosed_311_requests": 35,
+      "vacant_building_rehab_locations": 67,
+      "requests_per_100_rehab_sites": 3028.3582089552237,
+      "nonclosed_rate": 1.7249876786594383,
+      "joint_index": 0.1467733250851236
+    },
+    {
+      "neighborhood": "Biddle Street",
+      "requests_2026": 2019,
+      "nonclosed_311_requests": 62,
+      "vacant_building_rehab_locations": 65,
+      "requests_per_100_rehab_sites": 3106.153846153846,
+      "nonclosed_rate": 3.070827142149579,
+      "joint_index": 0.11446611870819065
+    },
+    {
+      "neighborhood": "Darley Park",
+      "requests_2026": 1884,
+      "nonclosed_311_requests": 54,
+      "vacant_building_rehab_locations": 66,
+      "requests_per_100_rehab_sites": 2854.5454545454545,
+      "nonclosed_rate": 2.8662420382165603,
+      "joint_index": 0.07998203994731556
+    },
+    {
+      "neighborhood": "Winston-Govans",
+      "requests_2026": 1614,
+      "nonclosed_311_requests": 57,
+      "vacant_building_rehab_locations": 72,
+      "requests_per_100_rehab_sites": 2241.6666666666665,
+      "nonclosed_rate": 3.5315985130111525,
+      "joint_index": 0.06839434061523986
+    },
+    {
+      "neighborhood": "Bridgeview/Greenlawn",
+      "requests_2026": 2466,
+      "nonclosed_311_requests": 62,
+      "vacant_building_rehab_locations": 47,
+      "requests_per_100_rehab_sites": 5246.808510638298,
+      "nonclosed_rate": 2.5141930251419304,
+      "joint_index": 0.017932941364339455
+    },
+    {
+      "neighborhood": "Beechfield",
+      "requests_2026": 3233,
+      "nonclosed_311_requests": 137,
+      "vacant_building_rehab_locations": 25,
+      "requests_per_100_rehab_sites": 12932,
+      "nonclosed_rate": 4.237550262913702,
+      "joint_index": -0.020237421142119683
+    },
+    {
+      "neighborhood": "Mid-Town Belvedere",
+      "requests_2026": 3443,
+      "nonclosed_311_requests": 260,
+      "vacant_building_rehab_locations": 18,
+      "requests_per_100_rehab_sites": 19127.777777777777,
+      "nonclosed_rate": 7.551553877432472,
+      "joint_index": -0.04469670005003745
+    },
+    {
+      "neighborhood": "South Baltimore",
+      "requests_2026": 3470,
+      "nonclosed_311_requests": 166,
+      "vacant_building_rehab_locations": 17,
+      "requests_per_100_rehab_sites": 20411.764705882353,
+      "nonclosed_rate": 4.783861671469741,
+      "joint_index": -0.0492759759357973
+    },
+    {
+      "neighborhood": "Dorchester",
+      "requests_2026": 1757,
+      "nonclosed_311_requests": 69,
+      "vacant_building_rehab_locations": 59,
+      "requests_per_100_rehab_sites": 2977.9661016949153,
+      "nonclosed_rate": 3.927148548662493,
+      "joint_index": -0.0663693733672315
+    },
+    {
+      "neighborhood": "Mid-Govans",
+      "requests_2026": 2104,
+      "nonclosed_311_requests": 42,
+      "vacant_building_rehab_locations": 48,
+      "requests_per_100_rehab_sites": 4383.333333333333,
+      "nonclosed_rate": 1.9961977186311788,
+      "joint_index": -0.0986565217001108
+    },
+    {
+      "neighborhood": "Hillen",
+      "requests_2026": 2655,
+      "nonclosed_311_requests": 88,
+      "vacant_building_rehab_locations": 34,
+      "requests_per_100_rehab_sites": 7808.823529411765,
+      "nonclosed_rate": 3.3145009416195856,
+      "joint_index": -0.10019267712049107
+    },
+    {
+      "neighborhood": "Winchester",
+      "requests_2026": 1836,
+      "nonclosed_311_requests": 80,
+      "vacant_building_rehab_locations": 54,
+      "requests_per_100_rehab_sites": 3400,
+      "nonclosed_rate": 4.357298474945534,
+      "joint_index": -0.10952082557576742
+    },
+    {
+      "neighborhood": "Mount Vernon",
+      "requests_2026": 3445,
+      "nonclosed_311_requests": 276,
+      "vacant_building_rehab_locations": 12,
+      "requests_per_100_rehab_sites": 28708.333333333332,
+      "nonclosed_rate": 8.011611030478955,
+      "joint_index": -0.13004399187812976
+    },
+    {
+      "neighborhood": "Rosemont Homeowners/Tenants",
+      "requests_2026": 1928,
+      "nonclosed_311_requests": 63,
+      "vacant_building_rehab_locations": 47,
+      "requests_per_100_rehab_sites": 4102.127659574468,
+      "nonclosed_rate": 3.267634854771784,
+      "joint_index": -0.17666043641241594
+    },
+    {
+      "neighborhood": "Idlewood",
+      "requests_2026": 2992,
+      "nonclosed_311_requests": 118,
+      "vacant_building_rehab_locations": 20,
+      "requests_per_100_rehab_sites": 14960,
+      "nonclosed_rate": 3.943850267379679,
+      "joint_index": -0.17913214637772198
+    },
+    {
+      "neighborhood": "Carroll-South Hilton",
+      "requests_2026": 2152,
+      "nonclosed_311_requests": 97,
+      "vacant_building_rehab_locations": 41,
+      "requests_per_100_rehab_sites": 5248.780487804878,
+      "nonclosed_rate": 4.507434944237918,
+      "joint_index": -0.18171083257798096
+    },
+    {
+      "neighborhood": "Langston Hughes",
+      "requests_2026": 1627,
+      "nonclosed_311_requests": 55,
+      "vacant_building_rehab_locations": 54,
+      "requests_per_100_rehab_sites": 3012.962962962963,
+      "nonclosed_rate": 3.380454824830977,
+      "joint_index": -0.18511565077157016
+    },
+    {
+      "neighborhood": "Union Square",
+      "requests_2026": 1472,
+      "nonclosed_311_requests": 64,
+      "vacant_building_rehab_locations": 57,
+      "requests_per_100_rehab_sites": 2582.4561403508774,
+      "nonclosed_rate": 4.3478260869565215,
+      "joint_index": -0.1981434550017997
+    },
+    {
+      "neighborhood": "Cedmont",
+      "requests_2026": 2153,
+      "nonclosed_311_requests": 126,
+      "vacant_building_rehab_locations": 39,
+      "requests_per_100_rehab_sites": 5520.51282051282,
+      "nonclosed_rate": 5.852299117510451,
+      "joint_index": -0.21003936394460854
+    },
+    {
+      "neighborhood": "Concerned Citizens of Forest Park",
+      "requests_2026": 1553,
+      "nonclosed_311_requests": 60,
+      "vacant_building_rehab_locations": 54,
+      "requests_per_100_rehab_sites": 2875.925925925926,
+      "nonclosed_rate": 3.86349001931745,
+      "joint_index": -0.21188128265907924
+    },
+    {
+      "neighborhood": "Bolton Hill",
+      "requests_2026": 3133,
+      "nonclosed_311_requests": 182,
+      "vacant_building_rehab_locations": 13,
+      "requests_per_100_rehab_sites": 24100,
+      "nonclosed_rate": 5.809128630705394,
+      "joint_index": -0.22854856853210098
+    },
+    {
+      "neighborhood": "Washington Hill",
+      "requests_2026": 2839,
+      "nonclosed_311_requests": 146,
+      "vacant_building_rehab_locations": 20,
+      "requests_per_100_rehab_sites": 14195,
+      "nonclosed_rate": 5.142655864741106,
+      "joint_index": -0.2344718987937881
+    },
+    {
+      "neighborhood": "Patterson Place",
+      "requests_2026": 2374,
+      "nonclosed_311_requests": 89,
+      "vacant_building_rehab_locations": 30,
+      "requests_per_100_rehab_sites": 7913.333333333333,
+      "nonclosed_rate": 3.7489469250210616,
+      "joint_index": -0.2592101969370581
+    },
+    {
+      "neighborhood": "Fallstaff",
+      "requests_2026": 2904,
+      "nonclosed_311_requests": 152,
+      "vacant_building_rehab_locations": 16,
+      "requests_per_100_rehab_sites": 18150,
+      "nonclosed_rate": 5.234159779614325,
+      "joint_index": -0.26834200464983954
+    },
+    {
+      "neighborhood": "Federal Hill",
+      "requests_2026": 3287,
+      "nonclosed_311_requests": 265,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 54783.333333333336,
+      "nonclosed_rate": 8.06206267112869,
+      "joint_index": -0.27326292021975535
+    },
+    {
+      "neighborhood": "Towanda-Grantley",
+      "requests_2026": 1873,
+      "nonclosed_311_requests": 71,
+      "vacant_building_rehab_locations": 41,
+      "requests_per_100_rehab_sites": 4568.292682926829,
+      "nonclosed_rate": 3.790710090763481,
+      "joint_index": -0.28262449874845447
+    },
+    {
+      "neighborhood": "South Clifton Park",
+      "requests_2026": 2508,
+      "nonclosed_311_requests": 52,
+      "vacant_building_rehab_locations": 22,
+      "requests_per_100_rehab_sites": 11400,
+      "nonclosed_rate": 2.073365231259968,
+      "joint_index": -0.3255036177363227
+    },
+    {
+      "neighborhood": "Wilson Park",
+      "requests_2026": 1472,
+      "nonclosed_311_requests": 80,
+      "vacant_building_rehab_locations": 48,
+      "requests_per_100_rehab_sites": 3066.6666666666665,
+      "nonclosed_rate": 5.434782608695652,
+      "joint_index": -0.32724948592856695
+    },
+    {
+      "neighborhood": "Brewers Hill",
+      "requests_2026": 2718,
+      "nonclosed_311_requests": 149,
+      "vacant_building_rehab_locations": 15,
+      "requests_per_100_rehab_sites": 18120,
+      "nonclosed_rate": 5.481972038263429,
+      "joint_index": -0.3499628966442405
+    },
+    {
+      "neighborhood": "Mount Washington",
+      "requests_2026": 2920,
+      "nonclosed_311_requests": 234,
+      "vacant_building_rehab_locations": 9,
+      "requests_per_100_rehab_sites": 32444.444444444445,
+      "nonclosed_rate": 8.013698630136986,
+      "joint_index": -0.36297064283041636
+    },
+    {
+      "neighborhood": "Gay Street",
+      "requests_2026": 1298,
+      "nonclosed_311_requests": 67,
+      "vacant_building_rehab_locations": 49,
+      "requests_per_100_rehab_sites": 2648.9795918367345,
+      "nonclosed_rate": 5.1617873651771955,
+      "joint_index": -0.3758397760896157
+    },
+    {
+      "neighborhood": "Parklane",
+      "requests_2026": 2034,
+      "nonclosed_311_requests": 60,
+      "vacant_building_rehab_locations": 30,
+      "requests_per_100_rehab_sites": 6780,
+      "nonclosed_rate": 2.949852507374631,
+      "joint_index": -0.3821874245283161
+    },
+    {
+      "neighborhood": "Callaway-Garrison",
+      "requests_2026": 1760,
+      "nonclosed_311_requests": 64,
+      "vacant_building_rehab_locations": 36,
+      "requests_per_100_rehab_sites": 4888.888888888889,
+      "nonclosed_rate": 3.6363636363636362,
+      "joint_index": -0.3952219147732302
+    },
+    {
+      "neighborhood": "Windsor Hills",
+      "requests_2026": 1439,
+      "nonclosed_311_requests": 72,
+      "vacant_building_rehab_locations": 44,
+      "requests_per_100_rehab_sites": 3270.4545454545455,
+      "nonclosed_rate": 5.0034746351633075,
+      "joint_index": -0.39656596914915754
+    },
+    {
+      "neighborhood": "Madison Park",
+      "requests_2026": 1958,
+      "nonclosed_311_requests": 117,
+      "vacant_building_rehab_locations": 30,
+      "requests_per_100_rehab_sites": 6526.666666666667,
+      "nonclosed_rate": 5.975485188968335,
+      "joint_index": -0.4096764518722444
+    },
+    {
+      "neighborhood": "Cylburn",
+      "requests_2026": 1791,
+      "nonclosed_311_requests": 106,
+      "vacant_building_rehab_locations": 34,
+      "requests_per_100_rehab_sites": 5267.64705882353,
+      "nonclosed_rate": 5.9184812953657175,
+      "joint_index": -0.4126995142935703
+    },
+    {
+      "neighborhood": "Cedonia",
+      "requests_2026": 2482,
+      "nonclosed_311_requests": 69,
+      "vacant_building_rehab_locations": 16,
+      "requests_per_100_rehab_sites": 15512.5,
+      "nonclosed_rate": 2.7800161160354553,
+      "joint_index": -0.42097844595428335
+    },
+    {
+      "neighborhood": "Charles North",
+      "requests_2026": 2677,
+      "nonclosed_311_requests": 102,
+      "vacant_building_rehab_locations": 11,
+      "requests_per_100_rehab_sites": 24336.363636363636,
+      "nonclosed_rate": 3.8102353380649983,
+      "joint_index": -0.4221729616905077
+    },
+    {
+      "neighborhood": "Rognel Heights",
+      "requests_2026": 1933,
+      "nonclosed_311_requests": 81,
+      "vacant_building_rehab_locations": 27,
+      "requests_per_100_rehab_sites": 7159.259259259259,
+      "nonclosed_rate": 4.190377651319193,
+      "joint_index": -0.46175423871973975
+    },
+    {
+      "neighborhood": "Dolfield",
+      "requests_2026": 1599,
+      "nonclosed_311_requests": 60,
+      "vacant_building_rehab_locations": 35,
+      "requests_per_100_rehab_sites": 4568.571428571428,
+      "nonclosed_rate": 3.75234521575985,
+      "joint_index": -0.4678003635623916
+    },
+    {
+      "neighborhood": "Boyd-Booth",
+      "requests_2026": 1078,
+      "nonclosed_311_requests": 34,
+      "vacant_building_rehab_locations": 47,
+      "requests_per_100_rehab_sites": 2293.6170212765956,
+      "nonclosed_rate": 3.1539888682745825,
+      "joint_index": -0.4841035053905611
+    },
+    {
+      "neighborhood": "Oldtown",
+      "requests_2026": 2413,
+      "nonclosed_311_requests": 84,
+      "vacant_building_rehab_locations": 13,
+      "requests_per_100_rehab_sites": 18561.53846153846,
+      "nonclosed_rate": 3.4811438043928717,
+      "joint_index": -0.48897093284300036
+    },
+    {
+      "neighborhood": "West Arlington",
+      "requests_2026": 1580,
+      "nonclosed_311_requests": 91,
+      "vacant_building_rehab_locations": 34,
+      "requests_per_100_rehab_sites": 4647.058823529412,
+      "nonclosed_rate": 5.7594936708860756,
+      "joint_index": -0.48901773494579226
+    },
+    {
+      "neighborhood": "Butchers Hill",
+      "requests_2026": 2136,
+      "nonclosed_311_requests": 120,
+      "vacant_building_rehab_locations": 19,
+      "requests_per_100_rehab_sites": 11242.105263157895,
+      "nonclosed_rate": 5.617977528089888,
+      "joint_index": -0.5030905162725432
+    },
+    {
+      "neighborhood": "West Forest Park",
+      "requests_2026": 1463,
+      "nonclosed_311_requests": 76,
+      "vacant_building_rehab_locations": 35,
+      "requests_per_100_rehab_sites": 4180,
+      "nonclosed_rate": 5.194805194805195,
+      "joint_index": -0.5169912545988948
+    },
+    {
+      "neighborhood": "Ashburton",
+      "requests_2026": 1988,
+      "nonclosed_311_requests": 114,
+      "vacant_building_rehab_locations": 21,
+      "requests_per_100_rehab_sites": 9466.666666666666,
+      "nonclosed_rate": 5.73440643863179,
+      "joint_index": -0.5279315509527243
+    },
+    {
+      "neighborhood": "Evergreen Lawn",
+      "requests_2026": 1487,
+      "nonclosed_311_requests": 58,
+      "vacant_building_rehab_locations": 33,
+      "requests_per_100_rehab_sites": 4506.060606060606,
+      "nonclosed_rate": 3.9004707464694013,
+      "joint_index": -0.537000738216702
+    },
+    {
+      "neighborhood": "Medfield",
+      "requests_2026": 2595,
+      "nonclosed_311_requests": 113,
+      "vacant_building_rehab_locations": 5,
+      "requests_per_100_rehab_sites": 51900,
+      "nonclosed_rate": 4.354527938342967,
+      "joint_index": -0.537902862688205
+    },
+    {
+      "neighborhood": "Violetville",
+      "requests_2026": 2426,
+      "nonclosed_311_requests": 114,
+      "vacant_building_rehab_locations": 9,
+      "requests_per_100_rehab_sites": 26955.555555555555,
+      "nonclosed_rate": 4.699093157460841,
+      "joint_index": -0.5416493205659502
+    },
+    {
+      "neighborhood": "Glen Oaks",
+      "requests_2026": 2450,
+      "nonclosed_311_requests": 156,
+      "vacant_building_rehab_locations": 8,
+      "requests_per_100_rehab_sites": 30625,
+      "nonclosed_rate": 6.36734693877551,
+      "joint_index": -0.5473136896363388
+    },
+    {
+      "neighborhood": "Forest Park",
+      "requests_2026": 1335,
+      "nonclosed_311_requests": 65,
+      "vacant_building_rehab_locations": 36,
+      "requests_per_100_rehab_sites": 3708.3333333333335,
+      "nonclosed_rate": 4.868913857677903,
+      "joint_index": -0.5489434492623028
+    },
+    {
+      "neighborhood": "Westfield",
+      "requests_2026": 1994,
+      "nonclosed_311_requests": 132,
+      "vacant_building_rehab_locations": 19,
+      "requests_per_100_rehab_sites": 10494.736842105263,
+      "nonclosed_rate": 6.619859578736208,
+      "joint_index": -0.5544515936783039
+    },
+    {
+      "neighborhood": "Pimlico Good Neighbors",
+      "requests_2026": 1615,
+      "nonclosed_311_requests": 71,
+      "vacant_building_rehab_locations": 28,
+      "requests_per_100_rehab_sites": 5767.857142857143,
+      "nonclosed_rate": 4.396284829721362,
+      "joint_index": -0.5624290017429684
+    },
+    {
+      "neighborhood": "Locust Point",
+      "requests_2026": 2234,
+      "nonclosed_311_requests": 162,
+      "vacant_building_rehab_locations": 12,
+      "requests_per_100_rehab_sites": 18616.666666666668,
+      "nonclosed_rate": 7.251566696508505,
+      "joint_index": -0.5680599407399342
+    },
+    {
+      "neighborhood": "West Hills",
+      "requests_2026": 2200,
+      "nonclosed_311_requests": 100,
+      "vacant_building_rehab_locations": 12,
+      "requests_per_100_rehab_sites": 18333.333333333332,
+      "nonclosed_rate": 4.545454545454546,
+      "joint_index": -0.5803576634990599
+    },
+    {
+      "neighborhood": "Mount Holly",
+      "requests_2026": 1525,
+      "nonclosed_311_requests": 56,
+      "vacant_building_rehab_locations": 29,
+      "requests_per_100_rehab_sites": 5258.620689655172,
+      "nonclosed_rate": 3.6721311475409837,
+      "joint_index": -0.5806366827344123
+    },
+    {
+      "neighborhood": "Ramblewood",
+      "requests_2026": 2185,
+      "nonclosed_311_requests": 85,
+      "vacant_building_rehab_locations": 11,
+      "requests_per_100_rehab_sites": 19863.636363636364,
+      "nonclosed_rate": 3.8901601830663615,
+      "joint_index": -0.6001282439696223
+    },
+    {
+      "neighborhood": "Parkside",
+      "requests_2026": 1837,
+      "nonclosed_311_requests": 61,
+      "vacant_building_rehab_locations": 19,
+      "requests_per_100_rehab_sites": 9668.421052631578,
+      "nonclosed_rate": 3.3206314643440393,
+      "joint_index": -0.6112381370072083
+    },
+    {
+      "neighborhood": "Yale Heights",
+      "requests_2026": 2107,
+      "nonclosed_311_requests": 95,
+      "vacant_building_rehab_locations": 12,
+      "requests_per_100_rehab_sites": 17558.333333333332,
+      "nonclosed_rate": 4.508780256288562,
+      "joint_index": -0.6139955522225511
+    },
+    {
+      "neighborhood": "Richnor Springs",
+      "requests_2026": 1592,
+      "nonclosed_311_requests": 43,
+      "vacant_building_rehab_locations": 24,
+      "requests_per_100_rehab_sites": 6633.333333333333,
+      "nonclosed_rate": 2.701005025125628,
+      "joint_index": -0.6281285076814631
+    },
+    {
+      "neighborhood": "Broening Manor",
+      "requests_2026": 1896,
+      "nonclosed_311_requests": 60,
+      "vacant_building_rehab_locations": 16,
+      "requests_per_100_rehab_sites": 11850,
+      "nonclosed_rate": 3.1645569620253164,
+      "joint_index": -0.6329333146850987
+    },
+    {
+      "neighborhood": "Roland Park",
+      "requests_2026": 2407,
+      "nonclosed_311_requests": 164,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 80233.33333333333,
+      "nonclosed_rate": 6.813460739509763,
+      "joint_index": -0.6345922646864437
+    },
+    {
+      "neighborhood": "Perring Loch",
+      "requests_2026": 2177,
+      "nonclosed_311_requests": 112,
+      "vacant_building_rehab_locations": 8,
+      "requests_per_100_rehab_sites": 27212.5,
+      "nonclosed_rate": 5.144694533762058,
+      "joint_index": -0.6460571694375548
+    },
+    {
+      "neighborhood": "Abell",
+      "requests_2026": 1723,
+      "nonclosed_311_requests": 110,
+      "vacant_building_rehab_locations": 19,
+      "requests_per_100_rehab_sites": 9068.421052631578,
+      "nonclosed_rate": 6.3842135809634355,
+      "joint_index": -0.6524716780231008
+    },
+    {
+      "neighborhood": "Graceland Park",
+      "requests_2026": 1532,
+      "nonclosed_311_requests": 108,
+      "vacant_building_rehab_locations": 23,
+      "requests_per_100_rehab_sites": 6660.869565217391,
+      "nonclosed_rate": 7.049608355091384,
+      "joint_index": -0.6641754859214566
+    },
+    {
+      "neighborhood": "East Arlington",
+      "requests_2026": 1786,
+      "nonclosed_311_requests": 65,
+      "vacant_building_rehab_locations": 14,
+      "requests_per_100_rehab_sites": 12757.142857142857,
+      "nonclosed_rate": 3.639417693169093,
+      "joint_index": -0.70141029388299
+    },
+    {
+      "neighborhood": "Central Forest Park",
+      "requests_2026": 913,
+      "nonclosed_311_requests": 54,
+      "vacant_building_rehab_locations": 36,
+      "requests_per_100_rehab_sites": 2536.1111111111113,
+      "nonclosed_rate": 5.9145673603504925,
+      "joint_index": -0.7015798905667466
+    },
+    {
+      "neighborhood": "Cross Country",
+      "requests_2026": 2077,
+      "nonclosed_311_requests": 205,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 34616.666666666664,
+      "nonclosed_rate": 9.870004814636495,
+      "joint_index": -0.7109171713533501
+    },
+    {
+      "neighborhood": "Homeland",
+      "requests_2026": 1988,
+      "nonclosed_311_requests": 117,
+      "vacant_building_rehab_locations": 5,
+      "requests_per_100_rehab_sites": 39760,
+      "nonclosed_rate": 5.885311871227364,
+      "joint_index": -0.7574533837114216
+    },
+    {
+      "neighborhood": "Cheswolde",
+      "requests_2026": 2065,
+      "nonclosed_311_requests": 135,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 68833.33333333333,
+      "nonclosed_rate": 6.5375302663438255,
+      "joint_index": -0.758292887734121
+    },
+    {
+      "neighborhood": "Gwynns Falls",
+      "requests_2026": 1224,
+      "nonclosed_311_requests": 55,
+      "vacant_building_rehab_locations": 24,
+      "requests_per_100_rehab_sites": 5100,
+      "nonclosed_rate": 4.493464052287582,
+      "joint_index": -0.7612332716625895
+    },
+    {
+      "neighborhood": "Panway/Braddish Avenue",
+      "requests_2026": 1536,
+      "nonclosed_311_requests": 66,
+      "vacant_building_rehab_locations": 16,
+      "requests_per_100_rehab_sites": 9600,
+      "nonclosed_rate": 4.296875,
+      "joint_index": -0.7631444968405484
+    },
+    {
+      "neighborhood": "Arcadia",
+      "requests_2026": 1059,
+      "nonclosed_311_requests": 66,
+      "vacant_building_rehab_locations": 28,
+      "requests_per_100_rehab_sites": 3782.1428571428573,
+      "nonclosed_rate": 6.232294617563739,
+      "joint_index": -0.7635329386274963
+    },
+    {
+      "neighborhood": "Woodberry",
+      "requests_2026": 1608,
+      "nonclosed_311_requests": 115,
+      "vacant_building_rehab_locations": 14,
+      "requests_per_100_rehab_sites": 11485.714285714286,
+      "nonclosed_rate": 7.151741293532338,
+      "joint_index": -0.7657924895042957
+    },
+    {
+      "neighborhood": "Kenilworth Park",
+      "requests_2026": 1587,
+      "nonclosed_311_requests": 55,
+      "vacant_building_rehab_locations": 12,
+      "requests_per_100_rehab_sites": 13225,
+      "nonclosed_rate": 3.465658475110271,
+      "joint_index": -0.802078370891534
+    },
+    {
+      "neighborhood": "Lucille Park",
+      "requests_2026": 1030,
+      "nonclosed_311_requests": 37,
+      "vacant_building_rehab_locations": 26,
+      "requests_per_100_rehab_sites": 3961.5384615384614,
+      "nonclosed_rate": 3.592233009708738,
+      "joint_index": -0.8027124018404113
+    },
+    {
+      "neighborhood": "Rosemont East",
+      "requests_2026": 1439,
+      "nonclosed_311_requests": 75,
+      "vacant_building_rehab_locations": 15,
+      "requests_per_100_rehab_sites": 9593.333333333334,
+      "nonclosed_rate": 5.211952744961779,
+      "joint_index": -0.8125742910242966
+    },
+    {
+      "neighborhood": "Tremont",
+      "requests_2026": 1312,
+      "nonclosed_311_requests": 41,
+      "vacant_building_rehab_locations": 17,
+      "requests_per_100_rehab_sites": 7717.64705882353,
+      "nonclosed_rate": 3.125,
+      "joint_index": -0.8298196734120763
+    },
+    {
+      "neighborhood": "Uplands",
+      "requests_2026": 1573,
+      "nonclosed_311_requests": 48,
+      "vacant_building_rehab_locations": 10,
+      "requests_per_100_rehab_sites": 15730,
+      "nonclosed_rate": 3.0514939605848697,
+      "joint_index": -0.8358323681813054
+    },
+    {
+      "neighborhood": "Chinquapin Park",
+      "requests_2026": 1589,
+      "nonclosed_311_requests": 70,
+      "vacant_building_rehab_locations": 9,
+      "requests_per_100_rehab_sites": 17655.555555555555,
+      "nonclosed_rate": 4.405286343612334,
+      "joint_index": -0.8443903190773707
+    },
+    {
+      "neighborhood": "Jonestown",
+      "requests_2026": 1661,
+      "nonclosed_311_requests": 76,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 23728.571428571428,
+      "nonclosed_rate": 4.575556893437688,
+      "joint_index": -0.8470383117411178
+    },
+    {
+      "neighborhood": "Hunting Ridge",
+      "requests_2026": 1736,
+      "nonclosed_311_requests": 73,
+      "vacant_building_rehab_locations": 5,
+      "requests_per_100_rehab_sites": 34720,
+      "nonclosed_rate": 4.2050691244239635,
+      "joint_index": -0.8486012112202364
+    },
+    {
+      "neighborhood": "Westgate",
+      "requests_2026": 1619,
+      "nonclosed_311_requests": 74,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 26983.333333333332,
+      "nonclosed_rate": 4.570722668313774,
+      "joint_index": -0.8765747308733389
+    },
+    {
+      "neighborhood": "Guilford",
+      "requests_2026": 1671,
+      "nonclosed_311_requests": 126,
+      "vacant_building_rehab_locations": 4,
+      "requests_per_100_rehab_sites": 41775,
+      "nonclosed_rate": 7.540394973070018,
+      "joint_index": -0.8864566781012778
+    },
+    {
+      "neighborhood": "Pulaski Industrial Area",
+      "requests_2026": 1742,
+      "nonclosed_311_requests": 180,
+      "vacant_building_rehab_locations": 2,
+      "requests_per_100_rehab_sites": 87100,
+      "nonclosed_rate": 10.332950631458095,
+      "joint_index": -0.8894663684932347
+    },
+    {
+      "neighborhood": "Cameron Village",
+      "requests_2026": 1194,
+      "nonclosed_311_requests": 59,
+      "vacant_building_rehab_locations": 15,
+      "requests_per_100_rehab_sites": 7960,
+      "nonclosed_rate": 4.941373534338358,
+      "joint_index": -0.9011902344356442
+    },
+    {
+      "neighborhood": "Garwyn Oaks",
+      "requests_2026": 791,
+      "nonclosed_311_requests": 46,
+      "vacant_building_rehab_locations": 25,
+      "requests_per_100_rehab_sites": 3164,
+      "nonclosed_rate": 5.815423514538558,
+      "joint_index": -0.9035032734299201
+    },
+    {
+      "neighborhood": "Medford",
+      "requests_2026": 1496,
+      "nonclosed_311_requests": 45,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 21371.428571428572,
+      "nonclosed_rate": 3.0080213903743314,
+      "joint_index": -0.906718436895699
+    },
+    {
+      "neighborhood": "Liberty Square",
+      "requests_2026": 1219,
+      "nonclosed_311_requests": 35,
+      "vacant_building_rehab_locations": 13,
+      "requests_per_100_rehab_sites": 9376.923076923076,
+      "nonclosed_rate": 2.871205906480722,
+      "joint_index": -0.9208380203252419
+    },
+    {
+      "neighborhood": "Reisterstown Station",
+      "requests_2026": 1433,
+      "nonclosed_311_requests": 66,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 20471.428571428572,
+      "nonclosed_rate": 4.6057222609909285,
+      "joint_index": -0.9295053937729026
+    },
+    {
+      "neighborhood": "Grove Park",
+      "requests_2026": 1145,
+      "nonclosed_311_requests": 98,
+      "vacant_building_rehab_locations": 11,
+      "requests_per_100_rehab_sites": 10409.09090909091,
+      "nonclosed_rate": 8.558951965065502,
+      "joint_index": -0.9762938813075881
+    },
+    {
+      "neighborhood": "Mount Winans",
+      "requests_2026": 708,
+      "nonclosed_311_requests": 31,
+      "vacant_building_rehab_locations": 20,
+      "requests_per_100_rehab_sites": 3540,
+      "nonclosed_rate": 4.378531073446328,
+      "joint_index": -1.0052497576084083
+    },
+    {
+      "neighborhood": "Otterbein",
+      "requests_2026": 1480,
+      "nonclosed_311_requests": 124,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 8.378378378378379,
+      "joint_index": -1.0129214023789823
+    },
+    {
+      "neighborhood": "Little Italy",
+      "requests_2026": 1151,
+      "nonclosed_311_requests": 58,
+      "vacant_building_rehab_locations": 8,
+      "requests_per_100_rehab_sites": 14387.5,
+      "nonclosed_rate": 5.039096437880104,
+      "joint_index": -1.0171590385805864
+    },
+    {
+      "neighborhood": "Ridgely's Delight",
+      "requests_2026": 1150,
+      "nonclosed_311_requests": 57,
+      "vacant_building_rehab_locations": 8,
+      "requests_per_100_rehab_sites": 14375,
+      "nonclosed_rate": 4.956521739130435,
+      "joint_index": -1.017520736308796
+    },
+    {
+      "neighborhood": "Stonewood-Pentwood-Winston",
+      "requests_2026": 1214,
+      "nonclosed_311_requests": 48,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 20233.333333333332,
+      "nonclosed_rate": 3.9538714991762767,
+      "joint_index": -1.0230623107982197
+    },
+    {
+      "neighborhood": "Old Goucher",
+      "requests_2026": 1132,
+      "nonclosed_311_requests": 73,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 16171.42857142857,
+      "nonclosed_rate": 6.448763250883392,
+      "joint_index": -1.038376409963987
+    },
+    {
+      "neighborhood": "Kernewood",
+      "requests_2026": 633,
+      "nonclosed_311_requests": 33,
+      "vacant_building_rehab_locations": 19,
+      "requests_per_100_rehab_sites": 3331.5789473684213,
+      "nonclosed_rate": 5.213270142180095,
+      "joint_index": -1.0467222017715456
+    },
+    {
+      "neighborhood": "Kresson",
+      "requests_2026": 868,
+      "nonclosed_311_requests": 38,
+      "vacant_building_rehab_locations": 13,
+      "requests_per_100_rehab_sites": 6676.923076923077,
+      "nonclosed_rate": 4.377880184331797,
+      "joint_index": -1.0477939229268054
+    },
+    {
+      "neighborhood": "Seton Hill",
+      "requests_2026": 1084,
+      "nonclosed_311_requests": 40,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 15485.714285714286,
+      "nonclosed_rate": 3.690036900369004,
+      "joint_index": -1.055737900918047
+    },
+    {
+      "neighborhood": "Armistead Gardens",
+      "requests_2026": 1350,
+      "nonclosed_311_requests": 25,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 1.8518518518518519,
+      "joint_index": -1.059942107046228
+    },
+    {
+      "neighborhood": "Belvedere",
+      "requests_2026": 869,
+      "nonclosed_311_requests": 33,
+      "vacant_building_rehab_locations": 12,
+      "requests_per_100_rehab_sites": 7241.666666666667,
+      "nonclosed_rate": 3.7974683544303796,
+      "joint_index": -1.0617773397460142
+    },
+    {
+      "neighborhood": "Wyman Park",
+      "requests_2026": 1218,
+      "nonclosed_311_requests": 72,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 40600,
+      "nonclosed_rate": 5.911330049261084,
+      "joint_index": -1.0646508635276373
+    },
+    {
+      "neighborhood": "Woodbourne Heights",
+      "requests_2026": 1045,
+      "nonclosed_311_requests": 53,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 14928.57142857143,
+      "nonclosed_rate": 5.07177033492823,
+      "joint_index": -1.0698441123182207
+    },
+    {
+      "neighborhood": "Lake Walker",
+      "requests_2026": 859,
+      "nonclosed_311_requests": 63,
+      "vacant_building_rehab_locations": 11,
+      "requests_per_100_rehab_sites": 7809.090909090909,
+      "nonclosed_rate": 7.334109429569266,
+      "joint_index": -1.0797394315755287
+    },
+    {
+      "neighborhood": "Wilhelm Park",
+      "requests_2026": 852,
+      "nonclosed_311_requests": 65,
+      "vacant_building_rehab_locations": 11,
+      "requests_per_100_rehab_sites": 7745.454545454545,
+      "nonclosed_rate": 7.629107981220657,
+      "joint_index": -1.0822713156729957
+    },
+    {
+      "neighborhood": "Sharp-Leadenhall",
+      "requests_2026": 998,
+      "nonclosed_311_requests": 91,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 16633.333333333332,
+      "nonclosed_rate": 9.118236472945892,
+      "joint_index": -1.1011890200914896
+    },
+    {
+      "neighborhood": "Parkway",
+      "requests_2026": 865,
+      "nonclosed_311_requests": 39,
+      "vacant_building_rehab_locations": 9,
+      "requests_per_100_rehab_sites": 9611.111111111111,
+      "nonclosed_rate": 4.508670520231214,
+      "joint_index": -1.1062594743011083
+    },
+    {
+      "neighborhood": "Oakenshawe",
+      "requests_2026": 820,
+      "nonclosed_311_requests": 70,
+      "vacant_building_rehab_locations": 9,
+      "requests_per_100_rehab_sites": 9111.111111111111,
+      "nonclosed_rate": 8.536585365853659,
+      "joint_index": -1.1225358720705396
+    },
+    {
+      "neighborhood": "Eastwood",
+      "requests_2026": 1086,
+      "nonclosed_311_requests": 27,
+      "vacant_building_rehab_locations": 2,
+      "requests_per_100_rehab_sites": 54300,
+      "nonclosed_rate": 2.4861878453038675,
+      "joint_index": -1.1267400781987207
+    },
+    {
+      "neighborhood": "North Roland Park/Poplar Hill",
+      "requests_2026": 1152,
+      "nonclosed_311_requests": 77,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 6.684027777777778,
+      "joint_index": -1.1315582572317253
+    },
+    {
+      "neighborhood": "Orangeville",
+      "requests_2026": 1035,
+      "nonclosed_311_requests": 44,
+      "vacant_building_rehab_locations": 2,
+      "requests_per_100_rehab_sites": 51750,
+      "nonclosed_rate": 4.251207729468599,
+      "joint_index": -1.1451866623374096
+    },
+    {
+      "neighborhood": "Carroll - Camden Industrial Area",
+      "requests_2026": 1056,
+      "nonclosed_311_requests": 78,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 105600,
+      "nonclosed_rate": 7.386363636363637,
+      "joint_index": -1.1519361245924267
+    },
+    {
+      "neighborhood": "Canton Industrial Area",
+      "requests_2026": 1074,
+      "nonclosed_311_requests": 89,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 8.286778398510242,
+      "joint_index": -1.1597706800320728
+    },
+    {
+      "neighborhood": "Baltimore Peninsula",
+      "requests_2026": 1046,
+      "nonclosed_311_requests": 70,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 6.692160611854685,
+      "joint_index": -1.1698982164219411
+    },
+    {
+      "neighborhood": "Original Northwood",
+      "requests_2026": 821,
+      "nonclosed_311_requests": 65,
+      "vacant_building_rehab_locations": 5,
+      "requests_per_100_rehab_sites": 16420,
+      "nonclosed_rate": 7.917174177831912,
+      "joint_index": -1.1795546325320043
+    },
+    {
+      "neighborhood": "Moravia-Walther",
+      "requests_2026": 860,
+      "nonclosed_311_requests": 39,
+      "vacant_building_rehab_locations": 4,
+      "requests_per_100_rehab_sites": 21500,
+      "nonclosed_rate": 4.534883720930233,
+      "joint_index": -1.1797935356792493
+    },
+    {
+      "neighborhood": "Hoes Heights",
+      "requests_2026": 740,
+      "nonclosed_311_requests": 33,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 10571.42857142857,
+      "nonclosed_rate": 4.45945945945946,
+      "joint_index": -1.1801619194221433
+    },
+    {
+      "neighborhood": "Saint Helena",
+      "requests_2026": 439,
+      "nonclosed_311_requests": 21,
+      "vacant_building_rehab_locations": 14,
+      "requests_per_100_rehab_sites": 3135.714285714286,
+      "nonclosed_rate": 4.783599088838269,
+      "joint_index": -1.1886171337812976
+    },
+    {
+      "neighborhood": "Beverly Hills",
+      "requests_2026": 741,
+      "nonclosed_311_requests": 55,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 12350,
+      "nonclosed_rate": 7.422402159244265,
+      "joint_index": -1.1941453362413523
+    },
+    {
+      "neighborhood": "Levindale",
+      "requests_2026": 778,
+      "nonclosed_311_requests": 47,
+      "vacant_building_rehab_locations": 5,
+      "requests_per_100_rehab_sites": 15560,
+      "nonclosed_rate": 6.041131105398458,
+      "joint_index": -1.1951076348450163
+    },
+    {
+      "neighborhood": "Coldspring",
+      "requests_2026": 929,
+      "nonclosed_311_requests": 77,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 92900,
+      "nonclosed_rate": 8.288482238966631,
+      "joint_index": -1.1978717360750437
+    },
+    {
+      "neighborhood": "Mayfield",
+      "requests_2026": 750,
+      "nonclosed_311_requests": 50,
+      "vacant_building_rehab_locations": 4,
+      "requests_per_100_rehab_sites": 18750,
+      "nonclosed_rate": 6.666666666666667,
+      "joint_index": -1.2195802857823033
+    },
+    {
+      "neighborhood": "Inner Harbor",
+      "requests_2026": 907,
+      "nonclosed_311_requests": 160,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 17.640573318632857,
+      "joint_index": -1.2201742006430731
+    },
+    {
+      "neighborhood": "Overlea",
+      "requests_2026": 625,
+      "nonclosed_311_requests": 53,
+      "vacant_building_rehab_locations": 7,
+      "requests_per_100_rehab_sites": 8928.57142857143,
+      "nonclosed_rate": 8.48,
+      "joint_index": -1.2217571581662452
+    },
+    {
+      "neighborhood": "Ten Hills",
+      "requests_2026": 778,
+      "nonclosed_311_requests": 36,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 25933.333333333332,
+      "nonclosed_rate": 4.627249357326479,
+      "joint_index": -1.2237978639398537
+    },
+    {
+      "neighborhood": "Franklintown",
+      "requests_2026": 646,
+      "nonclosed_311_requests": 38,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 10766.666666666666,
+      "nonclosed_rate": 5.882352941176471,
+      "joint_index": -1.2285066204212627
+    },
+    {
+      "neighborhood": "Fairfield Area",
+      "requests_2026": 639,
+      "nonclosed_311_requests": 59,
+      "vacant_building_rehab_locations": 6,
+      "requests_per_100_rehab_sites": 10650,
+      "nonclosed_rate": 9.23317683881064,
+      "joint_index": -1.2310385045187298
+    },
+    {
+      "neighborhood": "Tuscany-Canterbury",
+      "requests_2026": 840,
+      "nonclosed_311_requests": 42,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 5,
+      "joint_index": -1.2444079484331152
+    },
+    {
+      "neighborhood": "Wyndhurst",
+      "requests_2026": 794,
+      "nonclosed_311_requests": 83,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 79400,
+      "nonclosed_rate": 10.453400503778338,
+      "joint_index": -1.2467009293833373
+    },
+    {
+      "neighborhood": "University of Maryland",
+      "requests_2026": 713,
+      "nonclosed_311_requests": 72,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 23766.666666666668,
+      "nonclosed_rate": 10.098176718092567,
+      "joint_index": -1.2473082162734763
+    },
+    {
+      "neighborhood": "Fairmount",
+      "requests_2026": 461,
+      "nonclosed_311_requests": 17,
+      "vacant_building_rehab_locations": 9,
+      "requests_per_100_rehab_sites": 5122.222222222223,
+      "nonclosed_rate": 3.6876355748373104,
+      "joint_index": -1.2523853564977796
+    },
+    {
+      "neighborhood": "Jones Falls Area",
+      "requests_2026": 768,
+      "nonclosed_311_requests": 54,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 76800,
+      "nonclosed_rate": 7.03125,
+      "joint_index": -1.2561050703167864
+    },
+    {
+      "neighborhood": "Oaklee",
+      "requests_2026": 757,
+      "nonclosed_311_requests": 25,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 75700,
+      "nonclosed_rate": 3.3025099075297226,
+      "joint_index": -1.2600837453270919
+    },
+    {
+      "neighborhood": "Orchard Ridge",
+      "requests_2026": 776,
+      "nonclosed_311_requests": 23,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 2.963917525773196,
+      "joint_index": -1.2675566030385284
+    },
+    {
+      "neighborhood": "Saint Agnes",
+      "requests_2026": 650,
+      "nonclosed_311_requests": 31,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 21666.666666666668,
+      "nonclosed_rate": 4.769230769230769,
+      "joint_index": -1.27009517315068
+    },
+    {
+      "neighborhood": "Rosebank",
+      "requests_2026": 587,
+      "nonclosed_311_requests": 30,
+      "vacant_building_rehab_locations": 4,
+      "requests_per_100_rehab_sites": 14675,
+      "nonclosed_rate": 5.1107325383304945,
+      "joint_index": -1.2785370154804654
+    },
+    {
+      "neighborhood": "Heritage Crossing",
+      "requests_2026": 656,
+      "nonclosed_311_requests": 49,
+      "vacant_building_rehab_locations": 2,
+      "requests_per_100_rehab_sites": 32800,
+      "nonclosed_rate": 7.469512195121951,
+      "joint_index": -1.2822701013288413
+    },
+    {
+      "neighborhood": "Belair-Parkside",
+      "requests_2026": 370,
+      "nonclosed_311_requests": 16,
+      "vacant_building_rehab_locations": 9,
+      "requests_per_100_rehab_sites": 4111.111111111111,
+      "nonclosed_rate": 4.324324324324325,
+      "joint_index": -1.2852998497648518
+    },
+    {
+      "neighborhood": "Druid Hill Park",
+      "requests_2026": 719,
+      "nonclosed_311_requests": 85,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 11.821974965229485,
+      "joint_index": -1.2881733735464747
+    },
+    {
+      "neighborhood": "O'Donnell Heights",
+      "requests_2026": 704,
+      "nonclosed_311_requests": 17,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 2.414772727272727,
+      "joint_index": -1.2935988394696185
+    },
+    {
+      "neighborhood": "Patterson Park",
+      "requests_2026": 684,
+      "nonclosed_311_requests": 66,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 9.649122807017545,
+      "joint_index": -1.30083279403381
+    },
+    {
+      "neighborhood": "Barre Circle",
+      "requests_2026": 622,
+      "nonclosed_311_requests": 47,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 62200,
+      "nonclosed_rate": 7.556270096463023,
+      "joint_index": -1.3089129386353855
+    },
+    {
+      "neighborhood": "Downtown West",
+      "requests_2026": 647,
+      "nonclosed_311_requests": 76,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 11.746522411128284,
+      "joint_index": -1.3142156099775646
+    },
+    {
+      "neighborhood": "Evesham Park",
+      "requests_2026": 591,
+      "nonclosed_311_requests": 28,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 59100,
+      "nonclosed_rate": 4.737732656514383,
+      "joint_index": -1.3201255682098827
+    },
+    {
+      "neighborhood": "Dunbar-Broadway",
+      "requests_2026": 570,
+      "nonclosed_311_requests": 82,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 57000,
+      "nonclosed_rate": 14.385964912280702,
+      "joint_index": -1.327721220502284
+    },
+    {
+      "neighborhood": "Lake Evesham",
+      "requests_2026": 367,
+      "nonclosed_311_requests": 30,
+      "vacant_building_rehab_locations": 5,
+      "requests_per_100_rehab_sites": 7340,
+      "nonclosed_rate": 8.174386920980927,
+      "joint_index": -1.3437654011391547
+    },
+    {
+      "neighborhood": "Cross Keys",
+      "requests_2026": 563,
+      "nonclosed_311_requests": 42,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 7.460035523978686,
+      "joint_index": -1.3445982191471695
+    },
+    {
+      "neighborhood": "Radnor-Winston",
+      "requests_2026": 418,
+      "nonclosed_311_requests": 20,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 13933.333333333334,
+      "nonclosed_rate": 4.784688995215311,
+      "joint_index": -1.3540090460953031
+    },
+    {
+      "neighborhood": "Morgan State University",
+      "requests_2026": 517,
+      "nonclosed_311_requests": 35,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 6.769825918762089,
+      "joint_index": -1.3612363146448103
+    },
+    {
+      "neighborhood": "Johns Hopkins Homewood",
+      "requests_2026": 511,
+      "nonclosed_311_requests": 92,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 18.003913894324853,
+      "joint_index": -1.363406501014068
+    },
+    {
+      "neighborhood": "Gwynns Falls/Leakin Park",
+      "requests_2026": 469,
+      "nonclosed_311_requests": 45,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 46900,
+      "nonclosed_rate": 9.594882729211088,
+      "joint_index": -1.3642526910514516
+    },
+    {
+      "neighborhood": "Sabina-Mattfeldt",
+      "requests_2026": 426,
+      "nonclosed_311_requests": 61,
+      "vacant_building_rehab_locations": 2,
+      "requests_per_100_rehab_sites": 21300,
+      "nonclosed_rate": 14.31924882629108,
+      "joint_index": -1.365460578817045
+    },
+    {
+      "neighborhood": "Harbor East",
+      "requests_2026": 502,
+      "nonclosed_311_requests": 39,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 7.768924302788845,
+      "joint_index": -1.366661780567954
+    },
+    {
+      "neighborhood": "Bellona-Gittings",
+      "requests_2026": 479,
+      "nonclosed_311_requests": 40,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 8.350730688935283,
+      "joint_index": -1.3749808283167746
+    },
+    {
+      "neighborhood": "Keswick",
+      "requests_2026": 432,
+      "nonclosed_311_requests": 39,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 43200,
+      "nonclosed_rate": 9.027777777777779,
+      "joint_index": -1.3776355069952062
+    },
+    {
+      "neighborhood": "Montebello",
+      "requests_2026": 406,
+      "nonclosed_311_requests": 32,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 40600,
+      "nonclosed_rate": 7.8817733990147785,
+      "joint_index": -1.3870396479286553
+    },
+    {
+      "neighborhood": "Cedarcroft",
+      "requests_2026": 388,
+      "nonclosed_311_requests": 46,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 38800,
+      "nonclosed_rate": 11.855670103092784,
+      "joint_index": -1.3935502070364278
+    },
+    {
+      "neighborhood": "Clifton Park",
+      "requests_2026": 388,
+      "nonclosed_311_requests": 29,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 38800,
+      "nonclosed_rate": 7.474226804123711,
+      "joint_index": -1.3935502070364278
+    },
+    {
+      "neighborhood": "Forest Park Golf Course",
+      "requests_2026": 219,
+      "nonclosed_311_requests": 15,
+      "vacant_building_rehab_locations": 5,
+      "requests_per_100_rehab_sites": 4380,
+      "nonclosed_rate": 6.8493150684931505,
+      "joint_index": -1.397296664914173
+    },
+    {
+      "neighborhood": "Stadium/Entertainment Area",
+      "requests_2026": 417,
+      "nonclosed_311_requests": 34,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 8.15347721822542,
+      "joint_index": -1.3974060874657686
+    },
+    {
+      "neighborhood": "Wakefield",
+      "requests_2026": 281,
+      "nonclosed_311_requests": 15,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 9366.666666666666,
+      "nonclosed_rate": 5.338078291814947,
+      "joint_index": -1.403561634860016
+    },
+    {
+      "neighborhood": "Penn-Fallsway",
+      "requests_2026": 399,
+      "nonclosed_311_requests": 34,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 8.521303258145364,
+      "joint_index": -1.403916646573541
+    },
+    {
+      "neighborhood": "The Orchards",
+      "requests_2026": 397,
+      "nonclosed_311_requests": 38,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 9.571788413098236,
+      "joint_index": -1.40464004202996
+    },
+    {
+      "neighborhood": "Pleasant View Gardens",
+      "requests_2026": 394,
+      "nonclosed_311_requests": 8,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 2.030456852791878,
+      "joint_index": -1.405725135214589
+    },
+    {
+      "neighborhood": "Taylor Heights",
+      "requests_2026": 348,
+      "nonclosed_311_requests": 35,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 34800,
+      "nonclosed_rate": 10.057471264367816,
+      "joint_index": -1.408018116164811
+    },
+    {
+      "neighborhood": "Hopkins Bayview",
+      "requests_2026": 386,
+      "nonclosed_311_requests": 27,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 6.994818652849741,
+      "joint_index": -1.4086187170402655
+    },
+    {
+      "neighborhood": "Orangeville Industrial Area",
+      "requests_2026": 298,
+      "nonclosed_311_requests": 29,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 29800,
+      "nonclosed_rate": 9.731543624161073,
+      "joint_index": -1.4261030025752903
+    },
+    {
+      "neighborhood": "Locust Point Industrial Area",
+      "requests_2026": 318,
+      "nonclosed_311_requests": 38,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 11.949685534591195,
+      "joint_index": -1.4332141625585173
+    },
+    {
+      "neighborhood": "Mt Pleasant Park",
+      "requests_2026": 307,
+      "nonclosed_311_requests": 32,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 10.423452768729641,
+      "joint_index": -1.4371928375688228
+    },
+    {
+      "neighborhood": "Middle Branch/Reedbird Parks",
+      "requests_2026": 306,
+      "nonclosed_311_requests": 44,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 14.379084967320262,
+      "joint_index": -1.4375545352970323
+    },
+    {
+      "neighborhood": "Hawkins Point",
+      "requests_2026": 300,
+      "nonclosed_311_requests": 33,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 11,
+      "joint_index": -1.4397247216662898
+    },
+    {
+      "neighborhood": "Carroll Park",
+      "requests_2026": 291,
+      "nonclosed_311_requests": 28,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 9.621993127147766,
+      "joint_index": -1.442980001220176
+    },
+    {
+      "neighborhood": "Holabird Industrial Park",
+      "requests_2026": 261,
+      "nonclosed_311_requests": 15,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 5.747126436781609,
+      "joint_index": -1.4538309330664634
+    },
+    {
+      "neighborhood": "Saint Paul",
+      "requests_2026": 140,
+      "nonclosed_311_requests": 12,
+      "vacant_building_rehab_locations": 3,
+      "requests_per_100_rehab_sites": 4666.666666666667,
+      "nonclosed_rate": 8.571428571428571,
+      "joint_index": -1.4545610145375671
+    },
+    {
+      "neighborhood": "Seton Business Park",
+      "requests_2026": 250,
+      "nonclosed_311_requests": 27,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 10.8,
+      "joint_index": -1.4578096080767688
+    },
+    {
+      "neighborhood": "Dickeyville",
+      "requests_2026": 245,
+      "nonclosed_311_requests": 10,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 4.081632653061225,
+      "joint_index": -1.4596180967178167
+    },
+    {
+      "neighborhood": "Evergreen",
+      "requests_2026": 202,
+      "nonclosed_311_requests": 15,
+      "vacant_building_rehab_locations": 1,
+      "requests_per_100_rehab_sites": 20200,
+      "nonclosed_rate": 7.425742574257426,
+      "joint_index": -1.4608259844834102
+    },
+    {
+      "neighborhood": "Perkins",
+      "requests_2026": 239,
+      "nonclosed_311_requests": 22,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 9.205020920502092,
+      "joint_index": -1.461788283087074
+    },
+    {
+      "neighborhood": "Loyola/Notre Dame",
+      "requests_2026": 218,
+      "nonclosed_311_requests": 23,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 10.55045871559633,
+      "joint_index": -1.4693839353794753
+    },
+    {
+      "neighborhood": "Morgan Park",
+      "requests_2026": 206,
+      "nonclosed_311_requests": 17,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 8.25242718446602,
+      "joint_index": -1.4737243081179905
+    },
+    {
+      "neighborhood": "Key Highway",
+      "requests_2026": 189,
+      "nonclosed_311_requests": 11,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 5.8201058201058204,
+      "joint_index": -1.4798731694975533
+    },
+    {
+      "neighborhood": "Purnell",
+      "requests_2026": 163,
+      "nonclosed_311_requests": 5,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 3.067484662576687,
+      "joint_index": -1.4892773104310026
+    },
+    {
+      "neighborhood": "Harbor Point",
+      "requests_2026": 161,
+      "nonclosed_311_requests": 23,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 14.285714285714286,
+      "joint_index": -1.4900007058874216
+    },
+    {
+      "neighborhood": "Herring Run Park",
+      "requests_2026": 142,
+      "nonclosed_311_requests": 8,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 5.633802816901408,
+      "joint_index": -1.4968729627234039
+    },
+    {
+      "neighborhood": "Villages of Homeland",
+      "requests_2026": 128,
+      "nonclosed_311_requests": 5,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 3.90625,
+      "joint_index": -1.501936730918338
+    },
+    {
+      "neighborhood": "Curtis Bay Industrial Area",
+      "requests_2026": 122,
+      "nonclosed_311_requests": 11,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 9.01639344262295,
+      "joint_index": -1.5041069172875954
+    },
+    {
+      "neighborhood": "York-Homeland",
+      "requests_2026": 118,
+      "nonclosed_311_requests": 1,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 0.847457627118644,
+      "joint_index": -1.5055537082004338
+    },
+    {
+      "neighborhood": "Lower Herring Run Park",
+      "requests_2026": 69,
+      "nonclosed_311_requests": 8,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 11.594202898550725,
+      "joint_index": -1.5232768968827033
+    },
+    {
+      "neighborhood": "Greenmount Cemetery",
+      "requests_2026": 69,
+      "nonclosed_311_requests": 2,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 2.898550724637681,
+      "joint_index": -1.5232768968827033
+    },
+    {
+      "neighborhood": "Spring Garden Industrial Area",
+      "requests_2026": 50,
+      "nonclosed_311_requests": 3,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 6,
+      "joint_index": -1.5301491537186853
+    },
+    {
+      "neighborhood": "Blythewood",
+      "requests_2026": 37,
+      "nonclosed_311_requests": 2,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 5.405405405405405,
+      "joint_index": -1.53485122418541
+    },
+    {
+      "neighborhood": "Dundalk Marine Terminal",
+      "requests_2026": 31,
+      "nonclosed_311_requests": 2,
+      "vacant_building_rehab_locations": 0,
+      "requests_per_100_rehab_sites": 0,
+      "nonclosed_rate": 6.451612903225806,
+      "joint_index": -1.5370214105546673
+    }
+  ],
+  "top_request_types": [
+    {
+      "request_type": "SW-Rat Rubout Proactive",
+      "count": 139436,
+      "share": 20.13042417452643,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "TRS-Parking Complaint",
+      "count": 52963,
+      "share": 7.646286866773597,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "HCD-Sanitation Property",
+      "count": 35490,
+      "share": 5.123703734716594,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "SW-Dirty Alley",
+      "count": 24596,
+      "share": 3.550933137759632,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "SW-HGW",
+      "count": 23887,
+      "share": 3.448574559345598,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "SW-Mixed Refuse",
+      "count": 21268,
+      "share": 3.070468611720274,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "SW-Recycling",
+      "count": 17170,
+      "share": 2.478838915894165,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "SW-Dirty Street",
+      "count": 16306,
+      "share": 2.3541029331724084,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "SW-Bulk Scheduled-Weekday",
+      "count": 14601,
+      "share": 2.107951485787461,
+      "high_rehab_area_enrichment": 0
+    },
+    {
+      "request_type": "ECC-Vehicle Look Up",
+      "count": 14312,
+      "share": 2.066228454529836,
+      "high_rehab_area_enrichment": 0
+    }
+  ],
+  "high_rehab_area_request_types": [
+    {
+      "request_type": "SW-Boarding",
+      "count": 2995,
+      "share": 0.8955616621863666,
+      "high_rehab_area_enrichment": 3.8324597754261944
+    },
+    {
+      "request_type": "SW-Cleaning",
+      "count": 4370,
+      "share": 1.3067126757109921,
+      "high_rehab_area_enrichment": 3.7060651652933436
+    },
+    {
+      "request_type": "HCD-Vacant Building Squatter Encounter (Internal BCFD USE Only)",
+      "count": 199,
+      "share": 0.0595047648664731,
+      "high_rehab_area_enrichment": 3.529279801392683
+    },
+    {
+      "request_type": "HCD-Vacant Building",
+      "count": 4724,
+      "share": 1.4125653730111505,
+      "high_rehab_area_enrichment": 2.6515757955837067
+    },
+    {
+      "request_type": "SW-Dirty Alley",
+      "count": 17505,
+      "share": 5.234326175817143,
+      "high_rehab_area_enrichment": 2.515750808801327
+    }
+  ]
+}

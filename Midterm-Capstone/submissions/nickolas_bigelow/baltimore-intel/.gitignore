@@ -1,0 +1,5 @@
+bin/
+reports/
+data/raw/
+*.part
+.DS_Store
